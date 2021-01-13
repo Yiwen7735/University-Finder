@@ -1,0 +1,25 @@
+{
+  "name": "university-finder",
+  "version": "1.0.0",
+  "description": "The project is to build a web app enabling potential applicants to locate the university suitable for them",
+  "main": "filter_results.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yiwen7735/University-Finder.git"
+  },
+  "keywords": [
+    "uni"
+  ],
+  "author": "Yiwen Zhu, Minzhong Gao, Vivian Xi, Haoyu Xia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yiwen7735/University-Finder/issues"
+  },
+  "homepage": "https://github.com/Yiwen7735/University-Finder#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
