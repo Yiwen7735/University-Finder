@@ -1,1 +1,6 @@
 # University-Finder
+When applying for colleges, either undergraduate or graduate, students may have a vast amount of websites they need to search for the application requirements. Sometimes with much information or complex web structure of a school's website, grabbing accurate information may become less efficient and hard. Therefore, we develop a web application that allows students to search for the featured application information depending on the colleges they wish to apply for, the SAT/ACT scores of the past admitted students and the tuition for in-state and out-of-state students for reference.
+
+Our web app has a filter to search for universities based on a student's need. After inputting the university that a student wishes to apply to, the app returns information about the school's application requirements from our database. The student would then be able to gather some helpful information for their decision.
+
+We hope this web app would give students accurate information about the application requirements while saving time. Thus they can truly focus on the application with our web app taking care of gathering information. All data are from the National Center for Education Statistics(NCES, https://nces.ed.gov/).
