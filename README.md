@@ -1,6 +1,27 @@
-# University-Finder
-When applying for colleges, either undergraduate or graduate, students may have a vast amount of websites they need to search for the application requirements. Sometimes with much information or complex web structure of a school's website, grabbing accurate information may become less efficient and hard. Therefore, we develop a web application that allows students to search for the featured application information depending on the colleges they wish to apply for, the SAT/ACT scores of the past admitted students and the tuition for in-state and out-of-state students for reference.
+# MCIT On-Campus 2021 Winter Hackathon 
+### Project/Team Name: University-Finder
 
-Our web app has a filter to search for universities based on a student's need. After inputting the university that a student wishes to apply to, the app returns information about the school's application requirements from our database. The student would then be able to gather some helpful information for their decision.
+**Team Members** 
+Name | Year
+------------ | -------------
+Minzhong Gao | 1st
+Vivian Xi | 1st
+Haoyu Xia | 1st
+Yiwen Zhu | 1st
+  
+**General Idea**
+When applying for undergraduate universities/colleges, applicants normally face an overwhelming amount of information regarding different schools. To make the process more efficient and information more accessible, we aim to develop a web application that allows students to filter the universities by various factors, including admission criteria, tuition and geographical locations. More importatnly, we intend to tell the applicants where they stand in the pool (e.g., higher than 75% of applicants in the past years) based on their SAT/ACT scores. 
 
-We hope this web app would give students accurate information about the application requirements while saving time. Thus they can truly focus on the application with our web app taking care of gathering information. All data are from the National Center for Education Statistics(NCES, https://nces.ed.gov/).
+Our app functions in a very simple way: applicants just need to input their personal information (academic grades, financial budget, regional preferences, etc.), and the app will recommend a list of schools satisfying their requirements.
+
+We hope this app could give applicants a more clear view of the schools that match them, thus helping them make informed decisions. 
+
+All the data related to universities are obtained from the National Center for Education Statistics(NCES, https://nces.ed.gov/).
+
+**Anticipated Stack**
+We plan to rely on AWS RDS to host our database for US universities and use nodeJS to connect the database (query the information) and webpages (take user input).  
+
+**Presentation URL**
+URL to be updated
+
+
