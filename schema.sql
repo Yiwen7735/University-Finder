@@ -30,7 +30,7 @@ CREATE TABLE uni (
 	TUITION3 INT NOT NULL
 );
 
-LOAD DATA LOCAL INFILE '/Users/yiwenzhu/git/University-Finder/University_data/merged_data.csv'
+LOAD DATA INFILE '/Users/yiwenzhu/git/University-Finder/University_data/merged_data.csv'
 INTO TABLE uni
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
