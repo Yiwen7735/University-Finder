@@ -11,12 +11,12 @@ header{
   /* background-position: top; */
   background-repeat: no-repeat;
 }
-.satRead {
+.userInput {
   width: 50%;
   position: relative;
   height: 50px;
 }
-.satRead input {
+.userInput input {
   width: 100%;
   height: 100%;
   color: #3498db;
