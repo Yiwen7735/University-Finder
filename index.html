@@ -51,7 +51,7 @@
       </div>
 
 
-      <form class="userInput" action="search.php" method="post">
+      <form class="userInput" action="your-schools" method="post">
         <div class="userInput">
 
           <label for="states">Which state do you currently live?</label>
@@ -165,27 +165,27 @@
           <br><br>
 
           <label for="sat_readwrite">What is your SAT Reading score?</label>
-          <input type="range" id="sat_read" name="sat_read" min="200" max="800" value="500" step="10" oninput="updateRangeInput(this)">
+          <input type="range" id="sat_read" name="satvr" min="200" max="800" value="500" step="10" oninput="updateRangeInput(this)">
           <input type="text" value="500"><br><br>
           
           <label for="sat_math">What is your SAT Math score?</label>
-          <input type="range" id="sat_math" name="sat_math" min="200" max="800" value="500" step="10" oninput="updateRangeInput(this)">
+          <input type="range" id="sat_math" name="satmt" min="200" max="800" value="500" step="10" oninput="updateRangeInput(this)">
           <input type="text" value="500"><br><br>
 
           <label for="act_comp">What is your ACT Composite score?</label>
-          <input type="range" id="act_comp" name="act_comp" min="1" max="36" value="18" oninput="updateRangeInput(this)"/>
+          <input type="range" id="act_comp" name="actcm" min="1" max="36" value="18" oninput="updateRangeInput(this)"/>
           <input type="text" value="18"><br><br>
 
           <label for="act_eng">What is your ACT English score?</label>
-          <input type="range" id="act_eng" name="act_eng" value="" min="1" max="75" value="37" oninput="updateRangeInput(this)"/>
+          <input type="range" id="act_eng" name="acten" value="" min="1" max="75" value="37" oninput="updateRangeInput(this)"/>
           <input type="text" value="37"><br><br>
 
           <label for="act_math">What is your ACT Math score?</label>
-          <input type="range" id="act_math" name="act_math" value="" min="1" max="60" value="30" oninput="updateRangeInput(this)"/>
+          <input type="range" id="act_math" name="actmt" value="" min="1" max="60" value="30" oninput="updateRangeInput(this)"/>
           <input type="text" value="30"><br><br>
 
-          <label for="budget">What is your estimated budget ($/year)?</label>
-          <input type="text" id="budget" name="budget" placeholder="Enter a whole number..." value="" maxlength="6"/>
+          <label for="budget">What is your estimated budget?</label>
+          <input type="number" id="budget" name="budget" placeholder="$/year" value="" maxlength="6"/>
           <br><br>
 
           <input type="submit" id="searchButton" value="Search For Your Schools"/>
