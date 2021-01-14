@@ -6,7 +6,8 @@ var connection = mysql.createConnection({
 	host: 'us-uni.cgcckfsxakvi.us-east-1.rds.amazonaws.com', 
 	user: 'admin', 
 	password: '1234abcd',
-	database: 'us_uni'
+	database: 'us_uni',
+	multipleStatements: true
 });
 
 //check if connection is successful
@@ -19,7 +20,7 @@ connection.connect(function(err){
 });
 
 //make some random query for testing only
-var q = 'SELECT INSTNM FROM uni WHERE SATVR75 <= 500 AND SATMT75 <= 500 AND YEAR = 2019'
+var q = 'SELECT COUNT(*) FROM uni'
 connection.query(q, function(error, results){
 	if (error) throw error;
 	console.log(results)
