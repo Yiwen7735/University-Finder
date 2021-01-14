@@ -11,6 +11,17 @@ header{
   /* background-position: top; */
   background-repeat: no-repeat;
 }
+.satRead {
+  width: 50%;
+  position: relative;
+  height: 50px;
+}
+.satRead input {
+  width: 100%;
+  height: 100%;
+  color: #3498db;
+}
+
 .logo img{
   float: left;
   width: 350px;
