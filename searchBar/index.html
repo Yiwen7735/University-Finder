@@ -1,31 +1,59 @@
 <!Doctype html>
 <html>
   <head>
-    <title>University-Finder</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
+    <title>University-Finder</title>
+
     <script type="text/javascript">
       function active() {
         var searchBar = document.getElementById('searchBar');
 
-        if(searchBar.value == 'Search...'){
+        if(searchBar.value == 'Type to search...'){
           searchBar.value = ''
-          searchBar.placeholder = 'Search...'
+          searchBar.placeholder = 'Type to search...'
         }
       }
       function inactive() {
         var searchBar = document.getElementById('searchBar');
 
         if(searchBar.value == ''){
-          searchBar.value = 'Search...'
+          searchBar.value = 'Type to search...'
           searchBar.placeholder = ''
         }
       }
-
     </script>
   </head>
+
   <body>
-    <form action="search.php" method="post">
-      <input type="text" id="searchBar" placeholder="" value="Search..." maxlength="25" autocomplete="off" onmousedown="active();" onblur="inactive();" /><input type="submit" id="searchBtn" value="Go!" />
-    </form>
+    <header>
+      <div class="main">
+        <div class="logo">
+          <img src="3.png">
+        </div>
+        <!-- <br/>
+        <h3 align= "center">
+          <font face= "Lato" size= "6">LOGO</font>
+          &nbsp;
+        </h3> -->
+        <div class="title">
+          <h1>Find Your Dream College</h1>
+        </div>
+
+
+
+        <form action="search.php" method="post">
+          <div class="search-box">
+            <input class="search-txt" id="searchBar" type="text" name="" placeholder="Type to search..." maxlength="25" autocomplete="off" onmousedown="active();" onblur="inactive();">
+            <a class="search-btn" href="#">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+        </form>
+
+
+      </div>
+    </header>
   </body>
 </html>
