@@ -1,98 +1,118 @@
 <!Doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css" />
-    <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
-    <title>University-Finder</title>
 
-    <script type="text/javascript">
-      function active() {
-        var searchBar = document.getElementById('searchBar');
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+    integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS"
+    crossorigin="anonymous"></script>
+  <title>University Finder</title>
 
-        if(searchBar.value == 'Type to search...'){
-          searchBar.value = ''
-          searchBar.placeholder = 'Type to search...'
-        }
+  <script type="text/javascript">
+    function active() {
+      var searchBar = document.getElementById('searchBar');
+
+      if (searchBar.value == 'Type to search...') {
+        searchBar.value = ''
+        searchBar.placeholder = 'Type to search...'
       }
-      function inactive() {
-        var searchBar = document.getElementById('searchBar');
+    }
+    function inactive() {
+      var searchBar = document.getElementById('searchBar');
 
-        if(searchBar.value == ''){
-          searchBar.value = 'Type to search...'
-          searchBar.placeholder = ''
-        }
+      if (searchBar.value == '') {
+        searchBar.value = 'Type to search...'
+        searchBar.placeholder = ''
       }
-    </script>
-  </head>
+    }
+  </script>
+</head>
 
-  <body>
-    <header>
-      <div class="main">
-        <div class="logo">
-          <img src="3.png">
-        </div>
-        <!-- <br/>
+<body>
+  <header>
+    <div class="main">
+      <div class="logo">
+        <img src="3.png">
+      </div>
+      <!-- <br/>
         <h3 align= "center">
           <font face= "Lato" size= "6">LOGO</font>
           &nbsp;
         </h3> -->
-        <div class="title">
-          <h1>Find Your Dream College</h1>
-        </div>
-
-
-        <form class="userInput" action="index.html" method="post">
-          <div class="userInput">
-            <input type="text" name="name" autocomplete="off"  value="">
-            <label for="name" class="label-name">
-              <span class="content-name">SAT Read</span>
-            </label>
-
-            <input type="text" name="name" autocomplete="off"  value="">
-            <label for="name" class="label-name">
-              <span class="content-name">SAT Math</span>
-            </label>
-
-            <input type="text" name="name" autocomplete="off"  value="">
-            <label for="name" class="label-name">
-              <span class="content-name">ACT Composite</span>
-            </label>
-
-            <input type="text" name="name" autocomplete="off"  value="">
-            <label for="name" class="label-name">
-              <span class="content-name">ACT Math</span>
-            </label>
-
-            <input type="text" name="name" autocomplete="off"  value="">
-            <label for="name" class="label-name">
-              <span class="content-name">ACT English</span>
-            </label>
-
-            <input type="text" name="name" autocomplete="off"  value="">
-            <label for="name" class="label-name">
-              <span class="content-name">Tuition</span>
-            </label>
-
-            <input type="text" name="name" autocomplete="off"  value="">
-            <label for="name" class="label-name">
-              <span class="content-name">State</span>
-            </label>
-
-          </div>
-        </form>
-
-        <form action="search.php" method="post">
-          <div class="search-box">
-            <input class="search-txt" id="searchBar" type="text" name="" placeholder="Type to search..." maxlength="25" autocomplete="off" onmousedown="active();" onblur="inactive();">
-            <a class="search-btn" href="#">
-              <i class="fas fa-search"></i>
-            </a>
-          </div>
-        </form>
-
-
+      <div class="title">
+        <h1>Find Your Dream College</h1>
       </div>
-    </header>
-  </body>
+
+
+      <form class="userInput" action="search.php" method="post">
+        <div class="userInput">
+
+          <label for="states">Where do you currently live?</label>
+          <select name="states" id="userState">
+            <option value="alabama">Alabama</option>
+            <option value="alaska">Alaska</option>
+            <option value="arizona">Arizona</option>
+            <option value="arkansas">Arkansas</option>
+            <option value="california">California</option>
+            <option value="colorado">Colorado</option>
+
+          </select>
+          <br></br>
+
+          <label for="states">Where would you like to go?</label>
+          <select name="states" id="preferredState">
+            <option value="alabama">Alabama</option>
+            <option value="alaska">Alaska</option>
+            <option value="arizona">Arizona</option>
+            <option value="arkansas">Arkansas</option>
+            <option value="california">California</option>
+            <option value="colorado">Colorado</option>
+
+          </select>
+          <br></br>
+
+          <label for="sat_readwrite">What is your SAT Reading and Writing score?</label>
+          <input type="text" id="sat_readwrite" placeholder="Enter a number between 0 and 1600..." value="" maxlength="4" autocomplete="off" onMouseDown=""
+            onBlur="" />
+          <label for="sat_math">SAT Math:</label>
+          <input type="text" id="sat_math" placeholder="" value="" maxlength="3" autocomplete="off" onMouseDown=""
+            onBlur="" />
+          <br></br>
+          <label for="act_comp">ACT Composite:</label>
+          <input type="text" id="act_comp" placeholder="" value="" maxlength="3" autocomplete="off" onMouseDown=""
+            onBlur="" />
+          <label for="act_eng">ACT English:</label>
+          <input type="text" id="act_eng" placeholder="" value="" maxlength="3" autocomplete="off" onMouseDown=""
+            onBlur="" />
+          <label for="act_math">ACT Math:</label>
+          <input type="text" id="act_math" placeholder="" value="" maxlength="3" autocomplete="off" onMouseDown=""
+            onBlur="" />
+
+          <br></br>
+          <label for="budget">What is your budget ($/yr):</label>
+          <input type="text" id="budget" placeholder="Enter whole numbers only..." value="" maxlength="6" autocomplete="off" onMouseDown=""
+            onBlur="" />
+          <br></br>
+
+        </div>
+      </form>
+
+      <form action="search.php" method="post">
+        <div class="search-box">
+          <input class="search-txt" id="searchBar" type="text" name="" placeholder="Type to search..." maxlength="25"
+            autocomplete="off" onmousedown="active();" onblur="inactive();">
+          <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+      </form>
+
+
+    </div>
+  </header>
+</body>
+
 </html>
