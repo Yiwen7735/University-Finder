@@ -57,15 +57,15 @@ body {
   /* outline: none; */
   font-size: 25px;
   /* font-weight: bold; */
-  color: white;
+  color: #273c75;
 }
 .userInput input, select{
   /* width: 20%; */
   background: transparent;
   border: 0;
-  border-bottom: 2px solid #c5ecfd;
+  border-bottom: 2px solid #273c75;
   padding: 5px;
-  color: #f1c40f;
+  color: #273c75;
   width: 50%;
   font-size: 17px;
 }

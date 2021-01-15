@@ -60,7 +60,7 @@
       </div>
 
       <form class="userInput" action="your-schools" method="post">
-        <div class="userInput">
+
           <!-- <label for="userState">Your current state:</label>
           <select name="states" id="userState">
             <option value="alabama">Alabama</option>
@@ -120,11 +120,11 @@
           <input type="number" id="budget" name="budget" placeholder="$/year" value="" min="1000" max="100000" step="1000" maxlength="6" />
           <br><br> -->
 
-          Select your test type:
-          <input type="radio" id="sat" name="test_type" value="sat" onclick="radioCheck();">
-          <label for="sat">SAT</label>
-          <input type="radio" id="act" name="test_type" value="act" onclick="radioCheck();">
-          <label for="act">ACT</label><br><br>
+          Select your test type:<br><br>
+          <label for="sat">SAT<input type="radio" id="sat" name="test_type" value="sat" onclick="radioCheck();"></label>
+          <label for="act">ACT<input type="radio" id="act" name="test_type" value="act" onclick="radioCheck();"></label>
+          
+          <br><br>
 
           <div id="if_sat" style="display: none">
             <label for="sat_read">SAT Reading:</label>
@@ -150,10 +150,10 @@
             <input type="text" id="actmt_box" value="18" oninput="updateTheOtherInput(this, 'actmt_bar')"><br><br>
           </div>
           <input type="submit" id="searchButton" value="Search For Your Colleges!" />
-        </div>
+      
       </form>
 
-      <!--This button is for searching specific schools (not working at this time)-->
+      <!--This button is for searching specific schools (to be updated)-->
       <form action="search.php" method="post">
         <div class="search-box">
           <input class="search-txt" id="searchBar" type="text" name="" placeholder="Search a school..." maxlength="25" autocomplete="off" onmousedown="active();" onblur="inactive();">
