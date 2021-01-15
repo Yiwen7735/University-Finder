@@ -39,9 +39,11 @@ body {
 .userInput {
   position: absolute;
   top: 15%;
-  left: 30%;
-  transform: translateY(15%);
+
   
+  left: 50%;
+  transform: translate(-50%,15%);
+
   width: 100%;
 
   min-width: 300px;
