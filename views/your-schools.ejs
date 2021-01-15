@@ -15,8 +15,23 @@
     <div class="Title">
         <h1>Your University Recommendation</h1>
     </div>
+    Reach schools: 
     <ul>
-        <% for (var school of reach_schools){ %>
+        <% for (var school of schools.reach){ %>
+        <li><%= school.INSTNM %></li>
+        <% } %>
+    </ul> 
+
+    Match schools: 
+    <ul>
+        <% for (var school of schools.match){ %>
+        <li><%= school.INSTNM %></li>
+        <% } %>
+    </ul> 
+
+    Safety schools: 
+    <ul>
+        <% for (var school of schools.safety){ %>
         <li><%= school.INSTNM %></li>
         <% } %>
     </ul> 
