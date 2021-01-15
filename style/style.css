@@ -74,7 +74,12 @@ body {
   font-size: 17px;
 }
 
-input[type="radio"] {
+label {
+  display: inline-block;
+  min-width: 7em;
+}
+
+label, input[type='range'] {
   vertical-align: middle;
 }
 

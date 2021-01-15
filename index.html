@@ -52,7 +52,7 @@
   <header>
     <div class="main">
       <div class="logo">
-        <img src="./style/images/3.png">
+        <img src="./style/images/3(1).png">
       </div>
 
       <div class="title">
@@ -60,66 +60,6 @@
       </div>
 
       <form class="userInput" action="your-schools" method="post">
-
-          <!-- <label for="userState">Your current state:</label>
-          <select name="states" id="userState">
-            <option value="alabama">Alabama</option>
-            <option value="alaska">Alaska</option>
-            <option value="arizona">Arizona</option>
-            <option value="arkansas">Arkansas</option>
-            <option value="california">California</option>
-            <option value="colorado">Colorado</option>
-            <option value="connecticut">Connecticut</option>
-            <option value="delaware">Delaware</option>
-            <option value="florida">Florida</option>
-            <option value="georgia">Georgia</option>
-            <option value="hawaii">Hawaii</option>
-            <option value="idaho">Idaho</option>
-            <option value="illinois">Illinois</option>
-            <option value="indiana">Indiana</option>
-            <option value="iowa">Iowa</option>
-            <option value="kansas">Kansas</option>
-            <option value="kentucky">Kentucky</option>
-            <option value="louisiana">Louisiana</option>
-            <option value="maine">Maine</option>
-            <option value="maryland">Maryland</option>
-            <option value="massachusetts">Massachusetts</option>
-            <option value="michigan">Michigan</option>
-            <option value="minnesota">Minnesota</option>
-            <option value="mississippi">Mississippi</option>
-            <option value="missouri">Missouri</option>
-            <option value="montana">Montana</option>
-            <option value="nebraska">Nebraska</option>
-            <option value="nevada">Nevada</option>
-            <option value="new_hampshire">New Hampshire</option>
-            <option value="new_jersey">New Jersey</option>
-            <option value="new_mexico">New Mexico</option>
-            <option value="new_york">New York</option>
-            <option value="north_carolina">North Carolina</option>
-            <option value="north_dakota">North Dakota</option>
-            <option value="ohio">Ohio</option>
-            <option value="oklahoma">Oklahoma</option>
-            <option value="oregon">Oregon</option>
-            <option value="pennsylvania">Pennsylvania</option>
-            <option value="rhode_island">Rhode Island</option>
-            <option value="south_carolina">South Carolina</option>
-            <option value="south_dakota">South Dakota</option>
-            <option value="tennessee">Tennessee</option>
-            <option value="texas">Texas</option>
-            <option value="utah">Utah</option>
-            <option value="vermont">Vermont</option>
-            <option value="virginia">Virginia</option>
-            <option value="washington_dc">Washington D.C.</option>
-            <option value="west_virgina">West Virginia</option>
-            <option value="wisconsin">Wisconsin</option>
-            <option value="wyoming">Wyoming</option>
-          </select>
-          <br><br>
-
-          Your estimated budget ($/year):
-          <input type="number" id="budget" name="budget" placeholder="$/year" value="" min="1000" max="100000" step="1000" maxlength="6" />
-          <br><br> -->
-
           Select your test type:<br><br>
           <label for="sat">SAT<input type="radio" id="sat" name="test_type" value="sat" onclick="radioCheck();"></label>
           <label for="act">ACT<input type="radio" id="act" name="test_type" value="act" onclick="radioCheck();"></label>
@@ -129,12 +69,10 @@
             <label for="sat_read">SAT Reading:</label>
             <input type="range" id="satvr_bar" name="sat_read" min="200" max="800" value="500" step="10" oninput="updateTheOtherInput(this, 'satvr_box')">
             <output id="satvr_box">500</output><br>
-            <!--<input type="text" id="satvr_box" value="500" oninput="updateTheOtherInput(this, 'satvr_bar')"><br><br>-->
 
             <label for="sat_math">SAT Math:</label>
             <input type="range" id="satmt_bar" name="sat_math" min="200" max="800" value="500" step="10" oninput="updateTheOtherInput(this, 'satmt_box')">
             <output id="satmt_box">500</output><br>
-            <!--<input type="text" id="satmt_box" value="500" oninput="updateTheOtherInput(this, 'satmt_bar')"><br><br>-->
             <br>
           </div>
 
@@ -143,13 +81,13 @@
             <input type="range" id="actcm_bar" name="act_comp" min="1" max="36" value="18" oninput="updateTheOtherInput(this, 'actcm_box')" />
             <output id="actcm_box">18</output><br>
 
-            <label for="act_eng">ACT English:</label>
-            <input type="range" id="acten_bar" name="act_eng" value="" min="1" max="75" value="37" oninput="updateTheOtherInput(this, 'acten_box')" />
-            <output id="acten_box">37</output><br>
+            <label for="act_eng">ACT English:  </label>
+            <input type="range" id="acten_bar" name="act_eng" value="" min="1" max="36" value="18" oninput="updateTheOtherInput(this, 'acten_box')" />
+            <output id="acten_box">18</output><br>
 
-            <label for="act_math">ACT Math:</label>
-            <input type="range" id="actmt_bar" name="act_math" value="" min="1" max="60" value="30" oninput="updateTheOtherInput(this, 'actmt_box')" />
-            <output id="actmt_box">30</output><br>
+            <label for="act_math">ACT Math:     </label>
+            <input type="range" id="actmt_bar" name="act_math" value="" min="1" max="36" value="18" oninput="updateTheOtherInput(this, 'actmt_box')" />
+            <output id="actmt_box">18</output><br>
             <br>
           </div>
           <input type="submit" id="searchButton" value="Search For Your Colleges!"/>
