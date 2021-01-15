@@ -65,6 +65,9 @@ app.post("/your-schools", function(req, res){
 	var match = []
 	var safety = []
 
+	console.log(scores.satvr);
+	console.log(scores.satmt);
+
 	if (scores.test === 'sat')
 		q = `SELECT INSTNM, RANKING, TUITION2, TUITION3, ADMR, 
 			 (${scores.satvr} - SATVRM) / SATVRSD AS zVR, 
@@ -74,7 +77,7 @@ app.post("/your-schools", function(req, res){
 		q = `SELECT INSTNM, RANKING, TUITION2, TUITION3, 
 			 (${scores.actcm} - ACTCMM) / ACTCMSD AS zCM, 
 		 	 (${scores.actvr} - ACTVRM) / ACTVRSD AS zVR, 
-		     (${scores.actmt} - SATMTM) / SATMTSD AS zMT FROM uni LIMIT 10;`;
+		     (${scores.actmt} - SATMTM) / SATMTSD AS zMT FROM uni;`;
 
 	connection.query(q, function(error, results){
 		if (error) throw error;
@@ -93,20 +96,23 @@ app.post("/your-schools", function(req, res){
 				results[i].p = 0.4 * results[i].pVR + 0.4 * results[i].pMT + 0.2 * results[i].pCM
 			}	
 		}
-
-		results.sort((x, y) => x.p - y.p); //sort by probability
+		//filter by probability
 		for (var i = 0; i < results.length; ++i){
-			if (results[i].p >= 0.2 && results[i].p < 0.4 && reach.length < 10) reach.push(results[i]);
-			if (results[i].p >= 0.6 && results[i].p < 0.75 && match.length < 10) match.push(results[i]);
-			if (results[i].p >= 0.9 && safety.length < 10) safety.push(results[i]);
+			if (results[i].p >= 0.2 && results[i].p < 0.4) reach.push(results[i]);
+			if (results[i].p >= 0.6 && results[i].p < 0.75) match.push(results[i]);
+			if (results[i].p >= 0.9) safety.push(results[i]);
 		}
+		//sort by ranking within each probability range
+		reach.sort((x, y) => x.RANKING - y.RANKING);
+		match.sort((x, y) => x.RANKING - y.RANKING);
+		safety.sort((x, y) => x.RANKING - y.RANKING);
 		//console.log(results);
 		console.log("reach schools: \n")
-		console.log(reach);
+		console.log(reach.slice(0, 10));
 		console.log("match schools: \n")
-		console.log(match);
+		console.log(match.slice(0, 10));
 		console.log("safety schools: \n")
-		console.log(safety);
+		console.log(safety.slice(0, 10));
 
 		res.send("TODO: pass along school results to page2.ejs");
 	});
