@@ -29,10 +29,12 @@
         searchBar.placeholder = ''
       }
     }
-    /*function for displaying the slide bar value*/
-    function updateRangeInput(elem) {
-      $(elem).next().val($(elem).val());
+
+    /*function for updating slide bar and textbox input upon changing either*/
+    function updateTheOtherInput(elem, id){
+      $(document.getElementById(id)).val($(elem).val());
     }
+
     /*function for displaying sat/act based on radio*/
     function radioCheck() {
       if (document.getElementById("sat").checked) {
@@ -126,26 +128,26 @@
 
           <div id="if_sat" style="display: none">
             <label for="sat_read">SAT Reading:</label>
-            <input type="range" id="sat_read" name="sat_read" min="200" max="800" value="500" step="10" oninput="updateRangeInput(this)">
-            <input type="text" id="textbox" value="500"><br><br>
+            <input type="range" id="satvr_bar" name="sat_read" min="200" max="800" value="500" step="10" oninput="updateTheOtherInput(this, 'satvr_box')">
+            <input type="text" id="satvr_box" value="500" oninput="updateTheOtherInput(this, 'satvr_bar')"><br><br>
 
             <label for="sat_math">SAT Math:</label>
-            <input type="range" id="sat_math" name="sat_math" min="200" max="800" value="500" step="10" oninput="updateRangeInput(this)">
-            <input type="text" id="textbox" value="500"><br><br>
+            <input type="range" id="satmt_bar" name="sat_math" min="200" max="800" value="500" step="10" oninput="updateTheOtherInput(this, 'satmt_box')">
+            <input type="text" id="satmt_box" value="500" oninput="updateTheOtherInput(this, 'satmt_bar')"><br><br>
           </div>
 
           <div id="if_act" style="display: none">
             <label for="act_comp">ACT Composite:</label>
-            <input type="range" id="act_comp" name="act_comp" min="1" max="36" value="18" oninput="updateRangeInput(this)" />
-            <input type="text" id="textbox" value="18"><br><br>
+            <input type="range" id="actcm_bar" name="act_comp" min="1" max="36" value="18" oninput="updateTheOtherInput(this, 'actcm_box')" />
+            <input type="text" id="actcm_box" value="18" oninput="updateTheOtherInput(this, 'actcm_bar')"><br><br>
 
             <label for="act_eng">ACT English:</label>
-            <input type="range" id="act_eng" name="act_eng" value="" min="1" max="75" value="37" oninput="updateRangeInput(this)" />
-            <input type="text" id="textbox" value="37"><br><br>
+            <input type="range" id="acten_bar" name="act_eng" value="" min="1" max="36" value="18" oninput="updateTheOtherInput(this, 'acten_box')" />
+            <input type="text" id="acten_box" value="18" oninput="updateTheOtherInput(this, 'acten_bar')"><br><br>
 
             <label for="act_math">ACT Math:</label>
-            <input type="range" id="act_math" name="act_math" value="" min="1" max="60" value="30" oninput="updateRangeInput(this)" />
-            <input type="text" id="textbox" value="30"><br><br>
+            <input type="range" id="actmt_bar" name="act_math" value="" min="1" max="36" value="18" oninput="updateTheOtherInput(this, 'actmt_box')" />
+            <input type="text" id="actmt_box" value="18" oninput="updateTheOtherInput(this, 'actmt_bar')"><br><br>
           </div>
           <input type="submit" id="searchButton" value="Search For Your Colleges!" />
       
