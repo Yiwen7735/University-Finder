@@ -1,43 +1,52 @@
 *{
-  margin: 0;
+  margin: auto;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
 }
 
 header {
   position: relative;
   height: 100vh;
-  width: 100%;
-  align-items: center;
-  justify-content: center;  
+  width: auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.25)), url(./images/1.jpg);
   background-size: cover;
   background-position: center;
   /* background-position: top; */
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
-
 
 .userInput {
-  width: 50%;
-  position: relative;
-  height: 30px;
-  padding: 12%;
-  outline: none;
+  width: auto;
+  height: auto;
   margin: auto;
-  font-size: 16px;
+  position: relative;
+  padding: 10%;
+  outline: none;
+  font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: white;  
+  transform: translateY(-50%, -50%);
 }
 .userInput input {
-  width: 100%;
-  height: 100%;
-  color: #000000;
+  width: 20%;
+  color: #000000; 
 }
 
 
 .logo img{
-  float: left;
+  position: absolute;
+  top: -2vw;
+  left: 0%;
   width: 350px;
   height: auto;
 }
@@ -57,9 +66,8 @@ header {
 }
 .search-box {
   position: absolute;
-  top: 5%;
+  top: 5vw;
   left: 85%;
-  
   transform: translate(-50%, -50%);
   background: #2c3e50;
   height: 40px;
@@ -112,5 +120,13 @@ header {
   font-weight: bold;
   cursor: pointer;
   outline: none;
+  width: auto;
+}
 
+#textbox {
+  width: 50px;
+}
+
+#budget {
+  width: auto;
 }
