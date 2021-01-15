@@ -74,10 +74,6 @@ body {
   font-size: 17px;
 }
 
-input[type="text"] {
-  width: 20%;
-}
-
 input[type="radio"] {
   vertical-align: middle;
 }
