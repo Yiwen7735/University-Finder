@@ -8,47 +8,46 @@
     padding: 8em 0 0 0;
     margin-top: 0;
     background-image: linear-gradient(white,rgba(0, 0, 0, 0.3)), url("./images/page2bg.jpg");
-    background-size: 1400px;
+    background-size: cover;
     background-position: bottom ; 
     background-repeat: no-repeat;
-}
-
-.pair {
-    margin: 10px 300px;
 }
 
 .reach {
     margin-bottom: 100px;
 }
 
+.pair {
+    margin: 10px 200px;
+}
+
 .university {
-    width: 550px;
-	height: 165px;
-    margin: 10px 30px;
+    width: 650px;
+	height: 200px;
+    margin: 20px 30px;
     padding: 15px;
     box-shadow: rgba(17, 17, 17, 0.3) 0px 0px 6px;
     border-radius: 10px;
     display: inline-block;
 }
 
-.university_photo {
-    /* align-self: stretch; */
+
+/* .university_photo {
+    align-self: stretch;
     float:left;
-    width: 150px;
-    height: 145px;
-    display: inline-block;
-    padding-right: 10px;
-    margin:10px 20px 20px 0;  
-    border-right: 2px solid #f1f1f1;
-}
+    width: 22%;
+    height: auto;
+    margin-right: 20px;    
+} */
 
 .university_info {
-    width: 350px;
+    width: 330px;
     float: left;
     display: inline-block;
     box-sizing: border-box;
     padding-right: 0;
-    margin-right:5px;
+    margin-right:0px;
+    border-right: 2px solid #f1f1f1;
 }
 
 .university_name {
@@ -86,6 +85,11 @@
     color: grey;
 }
 
+.sat_act_title {
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+}
+
 .numbers{
     font-family: 'Roboto', sans-serif;
     color: black;
@@ -94,6 +98,46 @@
 .tuition .tuition_fee{
     font-family: 'Roboto', sans-serif;
     color: black;
+}
+
+.sat{
+    width: 300px;
+    padding: 10px;
+    padding-top:10px;
+    padding-right: 0;
+    padding-left: 10px;
+    margin-left: 5px;
+    display: inline-block;
+    border-bottom: 2px solid #f1f1f1;
+} 
+
+.subject_name {
+    text-align: right;
+}
+
+.act {
+    width: 300px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 0;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.r_w{
+    padding-left: 31px;
+}
+
+.math {
+    padding-left: 42px;
+}
+
+.english {
+    padding-left: 26px;
+}
+
+.act_math {
+    padding-left: 42px;
 }
 
 .userInput {
