@@ -121,7 +121,8 @@
           <br><br>
 
           Your estimated budget ($/year):
-          <input type="text" id="budget" name="budget" placeholder="Enter a whole number..." value="" maxlength="6" /><br><br>
+          <input type="number" id="budget" name="budget" placeholder="$/year" value="" min="1000" max="100000" step="1000" maxlength="6"/>
+          <br><br>
 
           Select your test type:
           <input type="radio" id="sat" name="test_type" value="sat" onclick="radioCheck();">
