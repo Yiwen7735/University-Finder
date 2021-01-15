@@ -76,7 +76,7 @@ body {
 
 label {
   display: inline-block;
-  min-width: 7em;
+  min-width: 7.5em;
 }
 
 label, input[type='range'] {
