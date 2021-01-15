@@ -29,10 +29,12 @@
         searchBar.placeholder = ''
       }
     }
-    /*function for displaying the slide bar value*/
-    function updateRangeInput(elem) {
-      $(elem).next().val($(elem).val());
+
+    /*function for updating slide bar and textbox input upon changing either*/
+    function updateTheOtherInput(elem, id){
+      $(document.getElementById(id)).val($(elem).val());
     }
+
     /*function for displaying sat/act based on radio*/
     function radioCheck() {
       if (document.getElementById("sat").checked) {
@@ -58,7 +60,7 @@
       </div>
 
       <form class="userInput" action="your-schools" method="post">
-        <div class="userInput">
+
           <!-- <label for="userState">Your current state:</label>
           <select name="states" id="userState">
             <option value="alabama">Alabama</option>
@@ -118,40 +120,43 @@
           <input type="number" id="budget" name="budget" placeholder="$/year" value="" min="1000" max="100000" step="1000" maxlength="6" />
           <br><br> -->
 
-          Select your test type:
-          <input type="radio" id="sat" name="test_type" value="sat" onclick="radioCheck();">
-          <label for="sat">SAT</label>
-          <input type="radio" id="act" name="test_type" value="act" onclick="radioCheck();">
-          <label for="act">ACT</label><br><br>
+          Select your test type:<br><br>
+          <label for="sat">SAT<input type="radio" id="sat" name="test_type" value="sat" onclick="radioCheck();"></label>
+          <label for="act">ACT<input type="radio" id="act" name="test_type" value="act" onclick="radioCheck();"></label>
+          <br>
 
           <div id="if_sat" style="display: none">
             <label for="sat_read">SAT Reading:</label>
-            <input type="range" id="sat_read" name="sat_read" min="200" max="800" value="500" step="10" oninput="updateRangeInput(this)">
-            <input type="text" id="textbox" value="500"><br><br>
+            <input type="range" id="satvr_bar" name="sat_read" min="200" max="800" value="500" step="10" oninput="updateTheOtherInput(this, 'satvr_box')">
+            <output id="satvr_box">500</output><br>
+            <!--<input type="text" id="satvr_box" value="500" oninput="updateTheOtherInput(this, 'satvr_bar')"><br><br>-->
 
             <label for="sat_math">SAT Math:</label>
-            <input type="range" id="sat_math" name="sat_math" min="200" max="800" value="500" step="10" oninput="updateRangeInput(this)">
-            <input type="text" id="textbox" value="500"><br><br>
+            <input type="range" id="satmt_bar" name="sat_math" min="200" max="800" value="500" step="10" oninput="updateTheOtherInput(this, 'satmt_box')">
+            <output id="satmt_box">500</output><br>
+            <!--<input type="text" id="satmt_box" value="500" oninput="updateTheOtherInput(this, 'satmt_bar')"><br><br>-->
+            <br>
           </div>
 
           <div id="if_act" style="display: none">
             <label for="act_comp">ACT Composite:</label>
-            <input type="range" id="act_comp" name="act_comp" min="1" max="36" value="18" oninput="updateRangeInput(this)" />
-            <input type="text" id="textbox" value="18"><br><br>
+            <input type="range" id="actcm_bar" name="act_comp" min="1" max="36" value="18" oninput="updateTheOtherInput(this, 'actcm_box')" />
+            <output id="actcm_box">18</output><br>
 
             <label for="act_eng">ACT English:</label>
-            <input type="range" id="act_eng" name="act_eng" value="" min="1" max="75" value="37" oninput="updateRangeInput(this)" />
-            <input type="text" id="textbox" value="37"><br><br>
+            <input type="range" id="acten_bar" name="act_eng" value="" min="1" max="75" value="37" oninput="updateTheOtherInput(this, 'acten_box')" />
+            <output id="acten_box">37</output><br>
 
             <label for="act_math">ACT Math:</label>
-            <input type="range" id="act_math" name="act_math" value="" min="1" max="60" value="30" oninput="updateRangeInput(this)" />
-            <input type="text" id="textbox" value="30"><br><br>
+            <input type="range" id="actmt_bar" name="act_math" value="" min="1" max="60" value="30" oninput="updateTheOtherInput(this, 'actmt_box')" />
+            <output id="actmt_box">30</output><br>
+            <br>
           </div>
-          <input type="submit" id="searchButton" value="Search For Your Colleges!" />
-        </div>
+          <input type="submit" id="searchButton" value="Search For Your Colleges!"/>
+      
       </form>
 
-      <!--This button is for searching specific schools (not working at this time)-->
+      <!--This button is for searching specific schools (to be updated)-->
       <form action="search.php" method="post">
         <div class="search-box">
           <input class="search-txt" id="searchBar" type="text" name="" placeholder="Search a school..." maxlength="25" autocomplete="off" onmousedown="active();" onblur="inactive();">

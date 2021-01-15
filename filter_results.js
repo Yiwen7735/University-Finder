@@ -5,7 +5,7 @@ var express = require('express');
 var http = require('http');
 var parser = require('body-parser');
 
-//express framework
+//set up express framework
 var app = express();
 app.set('view engine', 'ejs');
 app.use(parser.urlencoded({extended: true}));
@@ -74,39 +74,41 @@ app.post("/your-schools", function(req, res){
 			 (${scores.satmt} - SATMTM) / SATMTSD AS zMT FROM uni;`;
 
 	else if (scores.test === 'act')
-		q = `SELECT INSTNM, RANKING, TUITION2, TUITION3, 
+		q = `SELECT INSTNM, RANKING, TUITION2, TUITION3, ADMR, 
 			 (${scores.actcm} - ACTCMM) / ACTCMSD AS zCM, 
-		 	 (${scores.actvr} - ACTVRM) / ACTVRSD AS zVR, 
+		 	 (${scores.acten} - ACTENM) / ACTENSD AS zVR, 
 		     (${scores.actmt} - SATMTM) / SATMTSD AS zMT FROM uni;`;
 
 	connection.query(q, function(error, results){
 		if (error) throw error;
 		if (scores.test === 'sat'){
-			for (var i = 0; i < results.length; ++i){
-				results[i].pVR = getProb(results[i].zVR);
-				results[i].pMT = getProb(results[i].zMT);
-				results[i].p = (results[i].pVR + results[i].pMT) / 2;
-			}		
+			for (var result of results){
+				result.pVR = getProb(result.zVR);
+				result.pMT = getProb(result.zMT);
+				result.p = (result.pVR + result.pMT) / 2;
+			}
 		}
+
 		else if (scores.test === 'act'){
-			for (var i = 0; i < results.length; ++i){
-				results[i].pCM = getProb(results[i].zCM)
-				results[i].pVR = getProb(results[i].zVR);
-				results[i].pMT = getProb(results[i].zMT);
-				results[i].p = 0.4 * results[i].pVR + 0.4 * results[i].pMT + 0.2 * results[i].pCM
+			for (var result of results){
+				result.pCM = getProb(result.zCM)
+				result.pVR = getProb(result.zVR);
+				result.pMT = getProb(result.zMT);
+				result.p = 0.4 * result.pVR + 0.4 * result.pMT + 0.2 * result.pCM
 			}	
 		}
 		//filter by probability
-		for (var i = 0; i < results.length; ++i){
-			if (results[i].p >= 0.2 && results[i].p < 0.4) reach.push(results[i]);
-			if (results[i].p >= 0.6 && results[i].p < 0.75) match.push(results[i]);
-			if (results[i].p >= 0.9) safety.push(results[i]);
+		for (var result of results){
+			if (result.p >= 0.25 && result.p < 0.4) reach.push(result);
+			if (result.p >= 0.6 && result.p < 0.75) match.push(result);
+			if (result.p >= 0.9) safety.push(result);
 		}
 		//sort by ranking within each probability range
 		reach.sort((x, y) => x.RANKING - y.RANKING);
 		match.sort((x, y) => x.RANKING - y.RANKING);
 		safety.sort((x, y) => x.RANKING - y.RANKING);
-		//console.log(results);
+		
+		//print out results to console
 		console.log("reach schools: \n")
 		console.log(reach.slice(0, 10));
 		console.log("match schools: \n")
@@ -114,10 +116,17 @@ app.post("/your-schools", function(req, res){
 		console.log("safety schools: \n")
 		console.log(safety.slice(0, 10));
 
-		res.send("TODO: pass along school results to page2.ejs");
+		//res.send("TODO: pass along school results to page2.ejs");
+		res.render("your-schools", {reach_schools: reach});
 	});
 });
 
+/*
+//after user searches for a specific school (search bar)
+app.post('/search-school', function(req, res){
+	var instid = 
+});
+*/
 http.createServer(app).listen(80);
 
 
