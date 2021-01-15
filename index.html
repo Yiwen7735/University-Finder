@@ -123,33 +123,36 @@
           Select your test type:<br><br>
           <label for="sat">SAT<input type="radio" id="sat" name="test_type" value="sat" onclick="radioCheck();"></label>
           <label for="act">ACT<input type="radio" id="act" name="test_type" value="act" onclick="radioCheck();"></label>
-          
-          <br><br>
+          <br>
 
           <div id="if_sat" style="display: none">
             <label for="sat_read">SAT Reading:</label>
             <input type="range" id="satvr_bar" name="sat_read" min="200" max="800" value="500" step="10" oninput="updateTheOtherInput(this, 'satvr_box')">
-            <input type="text" id="satvr_box" value="500" oninput="updateTheOtherInput(this, 'satvr_bar')"><br><br>
+            <output id="satvr_box">500</output><br>
+            <!--<input type="text" id="satvr_box" value="500" oninput="updateTheOtherInput(this, 'satvr_bar')"><br><br>-->
 
             <label for="sat_math">SAT Math:</label>
             <input type="range" id="satmt_bar" name="sat_math" min="200" max="800" value="500" step="10" oninput="updateTheOtherInput(this, 'satmt_box')">
-            <input type="text" id="satmt_box" value="500" oninput="updateTheOtherInput(this, 'satmt_bar')"><br><br>
+            <output id="satmt_box">500</output><br>
+            <!--<input type="text" id="satmt_box" value="500" oninput="updateTheOtherInput(this, 'satmt_bar')"><br><br>-->
+            <br>
           </div>
 
           <div id="if_act" style="display: none">
             <label for="act_comp">ACT Composite:</label>
             <input type="range" id="actcm_bar" name="act_comp" min="1" max="36" value="18" oninput="updateTheOtherInput(this, 'actcm_box')" />
-            <input type="text" id="actcm_box" value="18" oninput="updateTheOtherInput(this, 'actcm_bar')"><br><br>
+            <output id="actcm_box">18</output><br>
 
             <label for="act_eng">ACT English:</label>
-            <input type="range" id="acten_bar" name="act_eng" value="" min="1" max="36" value="18" oninput="updateTheOtherInput(this, 'acten_box')" />
-            <input type="text" id="acten_box" value="18" oninput="updateTheOtherInput(this, 'acten_bar')"><br><br>
+            <input type="range" id="acten_bar" name="act_eng" value="" min="1" max="75" value="37" oninput="updateTheOtherInput(this, 'acten_box')" />
+            <output id="acten_box">37</output><br>
 
             <label for="act_math">ACT Math:</label>
-            <input type="range" id="actmt_bar" name="act_math" value="" min="1" max="36" value="18" oninput="updateTheOtherInput(this, 'actmt_box')" />
-            <input type="text" id="actmt_box" value="18" oninput="updateTheOtherInput(this, 'actmt_bar')"><br><br>
+            <input type="range" id="actmt_bar" name="act_math" value="" min="1" max="60" value="30" oninput="updateTheOtherInput(this, 'actmt_box')" />
+            <output id="actmt_box">30</output><br>
+            <br>
           </div>
-          <input type="submit" id="searchButton" value="Search For Your Colleges!" />
+          <input type="submit" id="searchButton" value="Search For Your Colleges!"/>
       
       </form>
 
