@@ -35,11 +35,14 @@ CREATE TABLE uni (
 	ACTENSD DECIMAL(6, 4) NOT NULL,
 	ACTMTM DECIMAL(6, 4) NOT NULL,
 	ACTMTSD DECIMAL(6, 4) NOT NULL, 
-	RANKING INT DEFAULT NULL
+	RANKING INT DEFAULT NULL, 
+	ESSAYL INT DEFAULT NULL, 
+	ESSAYS INT DEFAULT NULL, 
+	IMAGE VARCHAR(255) DEFAULT NULL
 );
 
 
-LOAD DATA INFILE '/Users/yiwenzhu/git/University-Finder/University_data/ranked_merged_data.csv'
+LOAD DATA INFILE '/Users/yiwenzhu/git/University-Finder/University_data/ranked_merged_data_sup.csv'
 INTO TABLE uni
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
