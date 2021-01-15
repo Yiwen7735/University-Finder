@@ -3,12 +3,11 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
-    integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS"
-    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <title>University Finder</title>
 
@@ -21,6 +20,7 @@
         searchBar.placeholder = 'Type to search...'
       }
     }
+
     function inactive() {
       var searchBar = document.getElementById('searchBar');
 
@@ -52,20 +52,14 @@
       <div class="logo">
         <img src="./style/images/3.png">
       </div>
-      <!-- <br/>
-        <h3 align= "center">
-          <font face= "Lato" size= "6">LOGO</font>
-          &nbsp;
-        </h3> -->
+
       <div class="title">
         <h1>Find Your College</h1>
       </div>
 
-
       <form class="userInput" action="your-schools" method="post">
         <div class="userInput">
-
-          Your current state:
+          <!-- <label for="userState">Your current state:</label>
           <select name="states" id="userState">
             <option value="alabama">Alabama</option>
             <option value="alaska">Alaska</option>
@@ -121,8 +115,8 @@
           <br><br>
 
           Your estimated budget ($/year):
-          <input type="number" id="budget" name="budget" placeholder="$/year" value="" min="1000" max="100000" step="1000" maxlength="6"/>
-          <br><br>
+          <input type="number" id="budget" name="budget" placeholder="$/year" value="" min="1000" max="100000" step="1000" maxlength="6" />
+          <br><br> -->
 
           Select your test type:
           <input type="radio" id="sat" name="test_type" value="sat" onclick="radioCheck();">
@@ -132,41 +126,35 @@
 
           <div id="if_sat" style="display: none">
             <label for="sat_read">SAT Reading:</label>
-            <input type="range" id="sat_read" name="sat_read" min="200" max="800" value="500" step="10"
-              oninput="updateRangeInput(this)">
+            <input type="range" id="sat_read" name="sat_read" min="200" max="800" value="500" step="10" oninput="updateRangeInput(this)">
             <input type="text" id="textbox" value="500"><br><br>
 
             <label for="sat_math">SAT Math:</label>
-            <input type="range" id="sat_math" name="sat_math" min="200" max="800" value="500" step="10"
-              oninput="updateRangeInput(this)">
+            <input type="range" id="sat_math" name="sat_math" min="200" max="800" value="500" step="10" oninput="updateRangeInput(this)">
             <input type="text" id="textbox" value="500"><br><br>
           </div>
 
           <div id="if_act" style="display: none">
             <label for="act_comp">ACT Composite:</label>
-            <input type="range" id="act_comp" name="act_comp" min="1" max="36" value="18"
-              oninput="updateRangeInput(this)" />
+            <input type="range" id="act_comp" name="act_comp" min="1" max="36" value="18" oninput="updateRangeInput(this)" />
             <input type="text" id="textbox" value="18"><br><br>
 
             <label for="act_eng">ACT English:</label>
-            <input type="range" id="act_eng" name="act_eng" value="" min="1" max="75" value="37"
-              oninput="updateRangeInput(this)" />
+            <input type="range" id="act_eng" name="act_eng" value="" min="1" max="75" value="37" oninput="updateRangeInput(this)" />
             <input type="text" id="textbox" value="37"><br><br>
 
             <label for="act_math">ACT Math:</label>
-            <input type="range" id="act_math" name="act_math" value="" min="1" max="60" value="30"
-              oninput="updateRangeInput(this)" />
+            <input type="range" id="act_math" name="act_math" value="" min="1" max="60" value="30" oninput="updateRangeInput(this)" />
             <input type="text" id="textbox" value="30"><br><br>
           </div>
-          <input type="submit" id="searchButton" value="Search For Your Colleges" />
+          <input type="submit" id="searchButton" value="Search For Your Colleges!" />
         </div>
       </form>
 
       <!--This button is for searching specific schools (not working at this time)-->
       <form action="search.php" method="post">
         <div class="search-box">
-          <input class="search-txt" id="searchBar" type="text" name="" placeholder="Search a school..." maxlength="25"
-            autocomplete="off" onmousedown="active();" onblur="inactive();">
+          <input class="search-txt" id="searchBar" type="text" name="" placeholder="Search a school..." maxlength="25" autocomplete="off" onmousedown="active();" onblur="inactive();">
           <a class="search-btn" href="#">
             <i class="fas fa-search"></i>
           </a>
