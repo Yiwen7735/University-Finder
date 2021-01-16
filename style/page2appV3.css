@@ -13,13 +13,15 @@
     background-repeat: no-repeat;
 }
 
-.reach {
+#reach, #match, #safety{
+    margin: 20px 200px;
     margin-bottom: 100px;
+    
 }
 
-.pair {
+/* .pair {
     margin: 10px 200px;
-}
+} */
 
 .university {
     width: 650px;
@@ -47,7 +49,7 @@
     box-sizing: border-box;
     padding-right: 0;
     margin-right:0px;
-    padding-left: 10px;
+    padding-left: ;
     border-right: 2px solid #f1f1f1;
 }
 
