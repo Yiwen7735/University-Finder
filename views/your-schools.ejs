@@ -36,6 +36,16 @@
         }
     </script>
 
+    <!-- calculate font size -->
+    <script type="text/javascript">
+        function fontSize() {
+            var deviceWidth = document.documentElement.clientWidth < 760 ? 760 : document.documentElement.clientWidth;
+            document.documentElement.style.fontSize = (deviceWidth / 120) + "px";
+        }
+        fontSize();
+        window.onresize = fontSize;
+    </script>
+
     <!-- This is for user to choose which school type to present -->
     <form class="userInput" action="your-schools" method="post">
         <div class="userInput">
