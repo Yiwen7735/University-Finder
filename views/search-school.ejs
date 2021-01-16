@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/page2appV2.css">
     <title>University Finder Result</title>
 </head>
@@ -43,8 +44,9 @@
                 &nbsp;Out-of-state: <span class="tuition_fee">$<%= school.tuition_out %></span> </div>
         </div>
     </div>
-    <h3>To apply for this school, you might also need the following: </h3>
-    <ul>
+
+
+    <!-- <ul>
         <li>Secondary School GPA: <%= school.hsgpa %>
         </li>
         <li>Secondary School Ranking: <%= school.hsrank %>
@@ -63,7 +65,94 @@
         </li>
         <li># of Short Essays (below 250 words): <%= school.short_essay %>
         </li>
-    </ul>
+    </ul> -->
+
+    <h3>Supplement Information </h3>
+    <div class="supplements">
+        <table class="paleBlueRows">
+            <tbody>
+                <tr>
+                    <td>Secondary School GPA</td>
+                    <td>
+                        <div class="tablevalue">
+                            <%= school.hsgpa %>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Secondary School Ranking</td>
+                    <td>
+                        <div class="tablevalue">
+                            <%= school.hsrank %>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Secondary School Records</td>
+                    <td>
+                        <div class="tablevalue">
+                            <%= school.hsrecord %>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>College Preparatory Program</td>
+                    <td>
+                        <div class="tablevalue">
+                            <%= school.prep %>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Recommendation Letters</td>
+                    <td>
+                        <div class="tablevalue">
+                            <%= school.recom %>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Admission Test Scores (SAT, ACT, etc)</td>
+                    <td>
+                        <div class="tablevalue">
+                            <%= school.test %>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TOEFL Scores</td>
+                    <td>
+                        <div class="tablevalue">
+                            <%= school.toefl %>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Number of Long Essays (more than 250 words)</td>
+                    <td>
+                        <div class="tablevalue">
+                            <%= school.long_essay %>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Number of Short Essays (below 250 words)</td>
+                    <td>
+                        <div class="tablevalue">
+                            <%= school.short_essay %>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+
 </body>
 
 </html>
