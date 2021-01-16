@@ -33,138 +33,68 @@
 
 
     <div class="university">
-        <div class="school badge">
-            <img class="university_photo" src="<%= school.logo %>" />
-        </div>
+        <div class="school badge"><img class="university_photo" src="<%= school.logo %>" /></div>
 
         <div class="university_info">
-            <div>
-                <h3 class="university_name">
-                    <%= school.name %>
-                </h3>
-            </div>
-            <div class="university_address">
-                <%= school.addr %>
-            </div>
+            <div><h3 class="university_name"><%= school.name %></h3></div>
+            <div class="university_address"><%= school.addr %></div>
             <div class="national_rank">
                 <img class="badge" src="./style/images/star.jpg">
                 National Rank: <span>#<%= school.rank %></span>
             </div>
-            <div class="admission_rate">Admission Rate: <span class="numbers">
-                    <%= school.admr %>%
-                </span></div>
-            <div class="tuition"> <span>Tuition Fee:</span><br>In-state: <span class="tuition_fee">$<%=
+            <div class="admission_rate">Admission Rate: <span class="numbers"><%= school.admr %>%</span></div>
+            <div class="tuition"> <span>Tuition</span><br>In-state: <span class="tuition_fee">$<%=
                         school.tuition_in %></span>
                 &nbsp;Out-of-state: <span class="tuition_fee">$<%= school.tuition_out %></span> </div>
         </div>
     </div>
 
 
-    <!-- <ul>
-        <li>Secondary School GPA: <%= school.hsgpa %>
-        </li>
-        <li>Secondary School Ranking: <%= school.hsrank %>
-        </li>
-        <li>Secondary School Records: <%= school.hsrecord %>
-        </li>
-        <li>College Preparatory Program: <%= school.prep %>
-        </li>
-        <li>Recommendation Letters: <%= school.recom %>
-        </li>
-        <li>Admission Test Scores (SAT, ACT, etc): <%= school.test %>
-        </li>
-        <li>TOEFL Scores: <%= school.toefl %>
-        </li>
-        <li># of Long Essays (more than 250 words): <%= school.long_essay %>
-        </li>
-        <li># of Short Essays (below 250 words): <%= school.short_essay %>
-        </li>
-    </ul> -->
-
-    <h3>Supplement Information </h3>
+    <h3>To apply for this school, you may also need the following </h3>
     <div class="supplements">
         <table class="paleBlueRows">
             <tbody>
                 <tr>
                     <td>Secondary School GPA</td>
-                    <td>
-                        <div class="tablevalue">
-                            <%= school.hsgpa %>
-                        </div>
-                    </td>
+                    <td><div class="tablevalue"><%= school.hsgpa %></div></td>
                 </tr>
                 <tr>
                     <td>Secondary School Ranking</td>
-                    <td>
-                        <div class="tablevalue">
-                            <%= school.hsrank %>
-                        </div>
-                    </td>
+                    <td><div class="tablevalue"><%= school.hsrank %></div></td>
                 </tr>
                 <tr>
                     <td>Secondary School Records</td>
-                    <td>
-                        <div class="tablevalue">
-                            <%= school.hsrecord %>
-                        </div>
+                    <td><div class="tablevalue"><%= school.hsrecord %></div>
                     </td>
                 </tr>
                 <tr>
                     <td>College Preparatory Program</td>
-                    <td>
-                        <div class="tablevalue">
-                            <%= school.prep %>
-                        </div>
-                    </td>
+                    <td><div class="tablevalue"><%= school.prep %></div></td>
                 </tr>
                 <tr>
                     <td>Recommendation Letters</td>
-                    <td>
-                        <div class="tablevalue">
-                            <%= school.recom %>
-                        </div>
-                    </td>
+                    <td><div class="tablevalue"><%= school.recom %></div></td>
                 </tr>
                 <tr>
                     <td>Admission Test Scores (SAT, ACT, etc)</td>
-                    <td>
-                        <div class="tablevalue">
-                            <%= school.test %>
-                        </div>
-                    </td>
+                    <td><div class="tablevalue"><%= school.test %></div></td>
                 </tr>
                 <tr>
                     <td>TOEFL Scores</td>
-                    <td>
-                        <div class="tablevalue">
-                            <%= school.toefl %>
-                        </div>
-                    </td>
+                    <td><div class="tablevalue"><%= school.toefl %></div></td>
                 </tr>
                 <tr>
                     <td>Number of Long Essays (more than 250 words)</td>
-                    <td>
-                        <div class="tablevalue">
-                            <%= school.long_essay %>
-                        </div>
-                    </td>
+                    <td><div class="tablevalue"><%= school.long_essay %></div></td>
                 </tr>
                 <tr>
                     <td>Number of Short Essays (below 250 words)</td>
-                    <td>
-                        <div class="tablevalue">
-                            <%= school.short_essay %>
-                        </div>
-                    </td>
+                    <td><div class="tablevalue"><%= school.short_essay %></div></td>
                 </tr>
             </tbody>
             </tr>
         </table>
     </div>
-
-
-
-
 
 
 </body>

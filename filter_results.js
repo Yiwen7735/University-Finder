@@ -124,6 +124,7 @@ app.post("/your-schools", function(req, res){
 
 		//prepare parameters to be sent to your-schools.ejs
 		var school_package = {
+			test: scores.test, 
 			reach: reach.slice(0, 10),
 			match: match.slice(0, 10),
 			safety: safety.slice(0, 10)
@@ -159,7 +160,7 @@ app.get('/search-school', function(req, res){
 			name: results[0].INSTNM, 
 			logo: results[0].IMAGE + ".png", 
 			addr: results[0].ADDR + ', ' + results[0].CITY + ', ' + results[0].STABBR, 
-			rank: results[0].RANKING, 
+			rank: (results[0].RANKING < 9999) ? results[0].RANKING : 'Unranked', 
 			tuition_in: results[0].TUITION2, 
 			tuition_out: results[0].TUITION3, 
 			admr: (results[0].ADMR * 100).toFixed(2),
