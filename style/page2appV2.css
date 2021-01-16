@@ -3,14 +3,15 @@
     height: 11%;
     font-size: 30px;
     color: white;
-    text-shadow: 3px 3px 3px #CE5937;
+    text-shadow: 3px 3px 3px #922B21;
     text-align: center;
     padding: 8em 0 0 0;
     margin-top: 0;
-    background-image: linear-gradient(white,rgba(0, 0, 0, 0.3)), url("./images/page2bg.jpg");
+    background-image: url("./images/penn3.jpg");
     background-size: cover;
     background-position: bottom ; 
     background-repeat: no-repeat;
+    opacity: 0.75
 }
 
 body {
@@ -18,9 +19,9 @@ body {
 }
 
 .university {
-    width: 30%;
+    width: 34%;
 	height: 18%;
-    margin: 1.04% 34%;
+    margin: 1.04% 32%;
     padding: 0.78%;
     box-shadow: rgba(17, 17, 17, 0.3) 0px 0px 6px;
     border-radius: 10px;
@@ -39,12 +40,12 @@ body {
 }
 
 .university_info {
-    width: 50%;
+    width: 65%;
     float: left;
     display: inline-block;
     box-sizing: border-box;
-    padding-right: 0;
-    margin-right:5px;
+    padding-right: 0px;
+    margin-right: 0px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -99,10 +100,10 @@ h3 {
 
 
 
-
 .supplements {
     margin: 0 25%;
     margin-bottom: 10%;
+    font-size: 14px;
 }
 
 .tablevalue {
