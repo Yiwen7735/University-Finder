@@ -64,6 +64,8 @@ body {
     text-align: left;
     padding: 0;
     margin: 0 0 0.2em 0;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 
 .university_address {
@@ -166,7 +168,10 @@ input[type=radio] + label {
     padding: 4px 12px;
     margin-bottom: 0;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 2.0;
+    border:3px solid white;
+    border-radius: 5px;
+    opacity: 0.8;
     color: #333;
     text-align: center;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
