@@ -28,7 +28,7 @@ body {
 } */
 
 .university {
-    width: 50%;
+    width: 44%;
 	height: 18.5%;
     margin: 1.04% 1.56%;
     padding: 0.78%;
@@ -47,7 +47,7 @@ body {
 } */
 
 .university_info {
-    width: 60%;
+    width: 50%;
     float: left;
     display: inline-block;
     box-sizing: border-box;
@@ -64,8 +64,6 @@ body {
     text-align: left;
     padding: 0;
     margin: 0 0 0.2em 0;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
 }
 
 .university_address {
@@ -168,10 +166,7 @@ input[type=radio] + label {
     padding: 4px 12px;
     margin-bottom: 0;
     font-size: 14px;
-    line-height: 2.0;
-    border:3px solid white;
-    border-radius: 5px;
-    opacity: 0.8;
+    line-height: 20px;
     color: #333;
     text-align: center;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
