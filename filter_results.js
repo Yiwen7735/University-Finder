@@ -69,13 +69,15 @@ app.post("/your-schools", function(req, res){
 	console.log(scores.actcm, scores.acten, scores.actmt);
 
 	if (scores.test === 'sat')
-		q = `SELECT INSTNM, RANKING, TUITION2, TUITION3, ADMR, 
+		q = `SELECT INSTNM, RANKING, ADDR, CITY, STABBR, 
+			 TUITION2, TUITION3, ADMR, 
 			 SATVRM, SATVRSD, SATMTM, SATMTSD, 
 			 (${scores.satvr} - SATVRM) / SATVRSD AS zVR, 
 			 (${scores.satmt} - SATMTM) / SATMTSD AS zMT FROM uni;`;
 
 	else if (scores.test === 'act')
-		q = `SELECT INSTNM, RANKING, TUITION2, TUITION3, ADMR, 
+		q = `SELECT INSTNM, RANKING, ADDR, CITY, STABBR, 
+		 	 TUITION2, TUITION3, ADMR, 
 			 ACTCMM, ACTCMSD, ACTENM, ACTENSD, ACTMTM, ACTMTSD, 
 			 (${scores.actcm} - ACTCMM) / ACTCMSD AS zCM, 
 		 	 (${scores.acten} - ACTENM) / ACTENSD AS zVR, 
@@ -173,7 +175,5 @@ app.get('/search-school', function(req, res){
 });
 
 http.createServer(app).listen(80);
-
-
 
 
