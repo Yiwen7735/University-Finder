@@ -40,7 +40,7 @@ body {
   position: absolute;
   top: 15%;
 
-  
+
   left: 50%;
   transform: translate(-50%,15%);
 
@@ -99,18 +99,18 @@ label, input[type='range'] {
 }
 .search-box {
   position: absolute;
-  top: 5vw;
-  left: 85%;
+  top: 5%;
+  left: 78%;
   transform: translate(-50%, -50%);
   background: #2c3e50;
-  height: 43px;
-  border-radius: 43px;
-  padding: 10px;
+  height: 40px;
+  border-radius: 40px;
+  padding: 0px;
 
 }
 .search-box:hover > .search-txt{
   width: 240px;
-  padding: 0 5px;
+  padding: 0 6px;
 }
 .search-box:hover > .search-btn{
   background: white;
@@ -118,8 +118,8 @@ label, input[type='range'] {
 .search-btn {
   color: #e84118;
   float: right;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #2c3e50;
   display: flex;
@@ -137,9 +137,9 @@ label, input[type='range'] {
   float: left;
   padding: 0;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   transition: 0.3s;
-  line-height: 25px;
+  line-height: 40px;
   width: 0px;
 }
 
