@@ -16,7 +16,7 @@ app.use(express.static(__dirname))
 var connection = mysql.createConnection({
 	host: 'us-uni.cgcckfsxakvi.us-east-1.rds.amazonaws.com', 
 	user: 'admin', 
-	password: '1234abcd',
+	password: process.env.rds_pw, 
 	database: 'us_uni',
 	multipleStatements: true
 });
@@ -144,8 +144,8 @@ function getEssayReq(number){
 }
 
 //after user searches for a specific school (search bar)
-app.post('/search-school', function(req, res){
-	var name = req.body.school_name;
+app.get('/search-school', function(req, res){
+	var name = req.query.school_name;
 	var q = `SELECT * FROM uni WHERE INSTNM like '%${name}%';`;
 	connection.query(q, function(error, results){
 		if (error) throw error;
