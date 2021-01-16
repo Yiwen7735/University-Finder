@@ -47,7 +47,7 @@ body {
 } */
 
 .university_info {
-    width: 50%;
+    width: 45%;
     float: left;
     display: inline-block;
     box-sizing: border-box;
@@ -63,7 +63,7 @@ body {
     font-size: 1.4rem;
     text-align: left;
     padding: 0;
-    margin: 0 0 0.2em 0;
+    margin: 0 0 0.4em 0;
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
@@ -71,7 +71,8 @@ body {
 .university_address {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9rem;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.8em;
+    margin-top: 0.5em;
     color:grey;
 }
 
@@ -83,8 +84,8 @@ body {
 .national_rank {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
 }
 
 .national_rank span {
@@ -114,7 +115,7 @@ body {
 }
 
 .sat{
-    width: 40%;
+    width: 50%;
     padding: 10px;
     padding-top:10px;
     padding-right: 0;
@@ -129,7 +130,17 @@ body {
 }
 
 .act {
-    width: 40%;
+    width: 50%;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 0;
+    margin-left: 5px;
+    display: inline-block;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.tuition {
+    width: 50%;
     padding: 10px;
     padding-left: 10px;
     padding-right: 0;
@@ -137,20 +148,23 @@ body {
     display: inline-block;
 }
 
+
+
+
 .r_w{
     padding-left: 8%;
 }
 
 .math {
-    padding-left: 16%;
+    padding-left: 14.5%;
 }
 
 .english {
-    padding-left: 10.5%;
+    padding-left: 8.5%;
 }
 
 .act_math {
-    padding-left: 16%;
+    padding-left: 13%;
 }
 
 .userInput {

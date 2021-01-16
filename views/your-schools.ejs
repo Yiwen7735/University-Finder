@@ -68,7 +68,8 @@
             <div class="university">
                 <div class="university_info">
                     <div>
-                        <a class="university_name" href="search-school?school_name=<%= school.INSTNM.replace(' ', '+') %>">
+                        <a class="university_name"
+                            href="search-school?school_name=<%= school.INSTNM.replace(' ', '+') %>">
                             <%= school.INSTNM %>
                         </a>
                     </div>
@@ -80,27 +81,31 @@
                         <% if (school.RANKING < 9999) { %>
                             National Rank <span> #<%= school.RANKING %></span>
                             <%} else { %>
-                            National Rank <span>Unranked</span>
-                            <% } %>
+                                National Rank <span>Unranked</span>
+                                <% } %>
                     </div>
                     <div class="admission_rate">Admission Rate <span class="numbers">
                             <%= (school.ADMR*100).toFixed(2) %>%
                         </span></div>
-                    <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
+                    <!-- <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
                             $<%= school.TUITION2 %>
                         </span>
                         &nbsp;Out-of-state <span class="tuition_fee">
                             $<%= school.TUITION3 %>
-                        </span> </div>
+                        </span> </div> -->
                 </div>
 
-                <% if (schools.test === 'sat') { %>
+                <% if (schools.test==='sat' ) { %>
                     <div class="sat">
                         <div class="sat_act_title">SAT Score:</div>
                         <div class="subject">
-                            <span class="r_w">Reading: </span> 
-                            <span class="score">Mean <span class="numbers"><%= school.SATVRM.toFixed(0) %></span> &nbsp;&nbsp;
-                                SD <span class="numbers"><%= school.SATVRSD.toFixed(0) %></span></span>
+                            <span class="r_w">Reading: </span>
+                            <span class="score">Mean <span class="numbers">
+                                    <%= school.SATVRM.toFixed(0) %>
+                                </span> &nbsp;&nbsp;
+                                SD <span class="numbers">
+                                    <%= school.SATVRSD.toFixed(0) %>
+                                </span></span>
                         </div>
                         <div class="subject">
                             <span class="math">Math: Mean <span class="numbers">
@@ -111,34 +116,47 @@
                                 </span></span>
                         </div>
                     </div>
-                <% } else { %>
-                    <div class="act">
-                        <div class="sat_act_title">ACT Score:</div>
-                        <div class="subject">Composite: Mean <span class="numbers">
-                                <%= school.ACTCMM.toFixed(1) %>
-                            </span> &nbsp;
-                            SD <span class="numbers">
-                                <%= school.ACTCMSD.toFixed(1) %>
-                            </span></div>
-                        <div class="subject"><span class="english"> English: </span>
-                            Mean <span class="numbers">
-                                <%= school.ACTENM.toFixed(1) %>
-                            </span> &nbsp;
-                            SD <span class="numbers">
-                                <%= school.ACTENSD.toFixed(1) %>
-                            </span></div>
-                        <div class="subject"><span class="act_math">Math:</span> Mean <span class="numbers">
-                                <%= school.ACTMTM.toFixed(1) %>
-                            </span>
-                            &nbsp;
-                            SD <span class="numbers">
-                                <%= school.ACTMTSD.toFixed(1) %>
-                            </span>
+                    <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
+                            $<%= school.TUITION2 %>
+                        </span>
+                        &nbsp;Out-of-state <span class="tuition_fee">
+                            $<%= school.TUITION3 %>
+                        </span> </div>
+
+                    <% } else { %>
+                        <div class="act">
+                            <div class="sat_act_title">ACT Score:</div>
+                            <div class="subject">Composite: Mean <span class="numbers">
+                                    <%= school.ACTCMM.toFixed(1) %>
+                                </span> &nbsp;
+                                SD <span class="numbers">
+                                    <%= school.ACTCMSD.toFixed(1) %>
+                                </span></div>
+                            <div class="subject"><span class="english"> English: </span>
+                                Mean <span class="numbers">
+                                    <%= school.ACTENM.toFixed(1) %>
+                                </span> &nbsp;
+                                SD <span class="numbers">
+                                    <%= school.ACTENSD.toFixed(1) %>
+                                </span></div>
+                            <div class="subject"><span class="act_math">Math:</span> Mean <span class="numbers">
+                                    <%= school.ACTMTM.toFixed(1) %>
+                                </span>
+                                &nbsp;
+                                SD <span class="numbers">
+                                    <%= school.ACTMTSD.toFixed(1) %>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                <% } %>
+                        <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
+                                $<%= school.TUITION2 %>
+                            </span>
+                            &nbsp;Out-of-state <span class="tuition_fee">
+                                $<%= school.TUITION3 %>
+                            </span> </div>
+                        <% } %>
             </div>
-        <% } %>
+            <% } %>
     </div>
 
     <div id="match" style="display: none;">
@@ -147,7 +165,8 @@
             <div class="university">
                 <div class="university_info">
                     <div>
-                        <a class="university_name" href="search-school?school_name=<%= school.INSTNM.replace(' ', '+') %>">
+                        <a class="university_name"
+                            href="search-school?school_name=<%= school.INSTNM.replace(' ', '+') %>">
                             <%= school.INSTNM %>
                         </a>
                     </div>
@@ -159,28 +178,33 @@
                         <% if (school.RANKING < 9999) { %>
                             National Rank <span> #<%= school.RANKING %></span>
                             <%} else { %>
-                            National Rank <span>Unranked</span>
-                            <% } %>
-                        </span>
+                                National Rank <span>Unranked</span>
+                                <% } %>
+                                    </span>
                     </div>
                     <div class="admission_rate">Admission Rate <span class="numbers">
                             <%= (school.ADMR*100).toFixed(2) %>%
                         </span></div>
-                    <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
+                    <!-- <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
                             $<%= school.TUITION2 %>
                         </span>
                         &nbsp;Out-of-state <span class="tuition_fee">
                             $<%= school.TUITION3 %>
-                        </span> </div>
+                        </span> </div> -->
                 </div>
 
-                <% if (schools.test === 'sat') { %>
+
+                <% if (schools.test==='sat' ) { %>
                     <div class="sat">
                         <div class="sat_act_title">SAT Score:</div>
                         <div class="subject">
-                            <span class="r_w">Reading: </span> 
-                            <span class="score">Mean <span class="numbers"><%= school.SATVRM.toFixed(0) %></span> &nbsp;&nbsp;
-                                SD <span class="numbers"><%= school.SATVRSD.toFixed(0) %></span></span>
+                            <span class="r_w">Reading: </span>
+                            <span class="score">Mean <span class="numbers">
+                                    <%= school.SATVRM.toFixed(0) %>
+                                </span> &nbsp;&nbsp;
+                                SD <span class="numbers">
+                                    <%= school.SATVRSD.toFixed(0) %>
+                                </span></span>
                         </div>
                         <div class="subject">
                             <span class="math">Math: Mean <span class="numbers">
@@ -191,34 +215,46 @@
                                 </span></span>
                         </div>
                     </div>
-                <% } else { %>
-                    <div class="act">
-                        <div class="sat_act_title">ACT Score:</div>
-                        <div class="subject">Composite: Mean <span class="numbers">
-                                <%= school.ACTCMM.toFixed(1) %>
-                            </span> &nbsp;
-                            SD <span class="numbers">
-                                <%= school.ACTCMSD.toFixed(1) %>
-                            </span></div>
-                        <div class="subject"><span class="english"> English: </span>
-                            Mean <span class="numbers">
-                                <%= school.ACTENM.toFixed(1) %>
-                            </span> &nbsp;
-                            SD <span class="numbers">
-                                <%= school.ACTENSD.toFixed(1) %>
-                            </span></div>
-                        <div class="subject"><span class="act_math">Math:</span> Mean <span class="numbers">
-                                <%= school.ACTMTM.toFixed(1) %>
-                            </span>
-                            &nbsp;
-                            SD <span class="numbers">
-                                <%= school.ACTMTSD.toFixed(1) %>
-                            </span>
+                    <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
+                            $<%= school.TUITION2 %>
+                        </span>
+                        &nbsp;Out-of-state <span class="tuition_fee">
+                            $<%= school.TUITION3 %>
+                        </span> </div>
+                    <% } else { %>
+                        <div class="act">
+                            <div class="sat_act_title">ACT Score:</div>
+                            <div class="subject">Composite: Mean <span class="numbers">
+                                    <%= school.ACTCMM.toFixed(1) %>
+                                </span> &nbsp;
+                                SD <span class="numbers">
+                                    <%= school.ACTCMSD.toFixed(1) %>
+                                </span></div>
+                            <div class="subject"><span class="english"> English: </span>
+                                Mean <span class="numbers">
+                                    <%= school.ACTENM.toFixed(1) %>
+                                </span> &nbsp;
+                                SD <span class="numbers">
+                                    <%= school.ACTENSD.toFixed(1) %>
+                                </span></div>
+                            <div class="subject"><span class="act_math">Math:</span> Mean <span class="numbers">
+                                    <%= school.ACTMTM.toFixed(1) %>
+                                </span>
+                                &nbsp;
+                                SD <span class="numbers">
+                                    <%= school.ACTMTSD.toFixed(1) %>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                <% } %>
+                        <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
+                                $<%= school.TUITION2 %>
+                            </span>
+                            &nbsp;Out-of-state <span class="tuition_fee">
+                                $<%= school.TUITION3 %>
+                            </span> </div>
+                        <% } %>
             </div>
-        <% } %>
+            <% } %>
     </div>
 
     <div id="safety" style="display: none;">
@@ -227,7 +263,8 @@
             <div class="university">
                 <div class="university_info">
                     <div>
-                        <a class="university_name" href="search-school?school_name=<%= school.INSTNM.replace(' ', '+') %>">
+                        <a class="university_name"
+                            href="search-school?school_name=<%= school.INSTNM.replace(' ', '+') %>">
                             <%= school.INSTNM %>
                         </a>
                     </div>
@@ -237,29 +274,33 @@
                     <div class="national_rank">
                         <img class="badge" src="./style/images/star.jpg">
                         <% if (school.RANKING < 9999) {%>
-                        National Rank <span>#<%= school.RANKING %> </span>
-                        <%} else { %>
-                        National Rank <span>Unranked</span>
-                        <% } %>
+                            National Rank <span>#<%= school.RANKING %> </span>
+                            <%} else { %>
+                                National Rank <span>Unranked</span>
+                                <% } %>
                     </div>
                     <div class="admission_rate">Admission Rate <span class="numbers">
                             <%= (school.ADMR*100).toFixed(2) %>%
                         </span></div>
-                    <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
+                    <!-- <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
                             $<%= school.TUITION2 %>
                         </span>
                         &nbsp;Out-of-state <span class="tuition_fee">
                             $<%= school.TUITION3 %>
-                        </span> </div>
+                        </span> </div> -->
                 </div>
 
-                <% if (schools.test === 'sat') { %>
+                <% if (schools.test==='sat' ) { %>
                     <div class="sat">
                         <div class="sat_act_title">SAT Score:</div>
                         <div class="subject">
-                            <span class="r_w">Reading: </span> 
-                            <span class="score">Mean <span class="numbers"><%= school.SATVRM.toFixed(0) %></span> &nbsp;&nbsp;
-                                SD <span class="numbers"><%= school.SATVRSD.toFixed(0) %></span></span>
+                            <span class="r_w">Reading: </span>
+                            <span class="score">Mean <span class="numbers">
+                                    <%= school.SATVRM.toFixed(0) %>
+                                </span> &nbsp;&nbsp;
+                                SD <span class="numbers">
+                                    <%= school.SATVRSD.toFixed(0) %>
+                                </span></span>
                         </div>
                         <div class="subject">
                             <span class="math">Math: Mean <span class="numbers">
@@ -270,34 +311,46 @@
                                 </span></span>
                         </div>
                     </div>
-                <% } else { %>
-                    <div class="act">
-                        <div class="sat_act_title">ACT Score:</div>
-                        <div class="subject">Composite: Mean <span class="numbers">
-                                <%= school.ACTCMM.toFixed(1) %>
-                            </span> &nbsp;
-                            SD <span class="numbers">
-                                <%= school.ACTCMSD.toFixed(1) %>
-                            </span></div>
-                        <div class="subject"><span class="english"> English: </span>
-                            Mean <span class="numbers">
-                                <%= school.ACTENM.toFixed(1) %>
-                            </span> &nbsp;
-                            SD <span class="numbers">
-                                <%= school.ACTENSD.toFixed(1) %>
-                            </span></div>
-                        <div class="subject"><span class="act_math">Math:</span> Mean <span class="numbers">
-                                <%= school.ACTMTM.toFixed(1) %>
-                            </span>
-                            &nbsp;
-                            SD <span class="numbers">
-                                <%= school.ACTMTSD.toFixed(1) %>
-                            </span>
+                    <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
+                            $<%= school.TUITION2 %>
+                        </span>
+                        &nbsp;Out-of-state <span class="tuition_fee">
+                            $<%= school.TUITION3 %>
+                        </span> </div>
+                    <% } else { %>
+                        <div class="act">
+                            <div class="sat_act_title">ACT Score:</div>
+                            <div class="subject">Composite: Mean <span class="numbers">
+                                    <%= school.ACTCMM.toFixed(1) %>
+                                </span> &nbsp;
+                                SD <span class="numbers">
+                                    <%= school.ACTCMSD.toFixed(1) %>
+                                </span></div>
+                            <div class="subject"><span class="english"> English: </span>
+                                Mean <span class="numbers">
+                                    <%= school.ACTENM.toFixed(1) %>
+                                </span> &nbsp;
+                                SD <span class="numbers">
+                                    <%= school.ACTENSD.toFixed(1) %>
+                                </span></div>
+                            <div class="subject"><span class="act_math">Math:</span> Mean <span class="numbers">
+                                    <%= school.ACTMTM.toFixed(1) %>
+                                </span>
+                                &nbsp;
+                                SD <span class="numbers">
+                                    <%= school.ACTMTSD.toFixed(1) %>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                <% } %>
+                        <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
+                                $<%= school.TUITION2 %>
+                            </span>
+                            &nbsp;Out-of-state <span class="tuition_fee">
+                                $<%= school.TUITION3 %>
+                            </span> </div>
+                        <% } %>
             </div>
-        <% } %>
+            <% } %>
     </div>
 
 </body>
