@@ -134,24 +134,24 @@ body {
     display: inline-block;
 }
 
-/* .r_w{
-    padding-left: 1%;
+.r_w{
+    padding-left: 13.7%;
 }
 
 .math {
-    padding-left: 6%;
+    padding-left: 16%;
 }
 
 .english {
-    padding-left: 12%;
+    padding-left: 10.5%;
 }
 
 .act_math {
-    padding-left: 20%;
-} */
+    padding-left: 16%;
+}
 
 .userInput {
-    margin: 30px 15%;
+    margin: 30px 20%;
     font-family: 'Roboto', sans-serif;
 }
 
