@@ -16,7 +16,7 @@ app.use(express.static(__dirname))
 var connection = mysql.createConnection({
 	host: 'us-uni.cgcckfsxakvi.us-east-1.rds.amazonaws.com', 
 	user: 'admin', 
-	password: '1234abcd',
+	password: process.env.rds_pw, 
 	database: 'us_uni',
 	multipleStatements: true
 });
@@ -65,19 +65,21 @@ app.post("/your-schools", function(req, res){
 	var match = []
 	var safety = []
 
-	console.log(scores.satvr);
-	console.log(scores.satmt);
+	console.log(scores.satvr, scores.satmt);
+	console.log(scores.actcm, scores.acten, scores.actmt);
 
 	if (scores.test === 'sat')
 		q = `SELECT INSTNM, RANKING, TUITION2, TUITION3, ADMR, 
+			 SATVRM, SATVRSD, SATMTM, SATMTSD, 
 			 (${scores.satvr} - SATVRM) / SATVRSD AS zVR, 
 			 (${scores.satmt} - SATMTM) / SATMTSD AS zMT FROM uni;`;
 
 	else if (scores.test === 'act')
 		q = `SELECT INSTNM, RANKING, TUITION2, TUITION3, ADMR, 
+			 ACTCMM, ACTCMSD, ACTENM, ACTENSD, ACTMTM, ACTMTSD, 
 			 (${scores.actcm} - ACTCMM) / ACTCMSD AS zCM, 
 		 	 (${scores.acten} - ACTENM) / ACTENSD AS zVR, 
-		     (${scores.actmt} - SATMTM) / SATMTSD AS zMT FROM uni;`;
+		     (${scores.actmt} - ACTMTM) / ACTMTSD AS zMT FROM uni;`;
 
 	connection.query(q, function(error, results){
 		if (error) throw error;
@@ -100,8 +102,8 @@ app.post("/your-schools", function(req, res){
 		//filter by probability
 		for (var result of results){
 			if (result.p >= 0.25 && result.p < 0.4) reach.push(result);
-			if (result.p >= 0.6 && result.p < 0.75) match.push(result);
-			if (result.p >= 0.9) safety.push(result);
+			if (result.p >= 0.55 && result.p < 0.7) match.push(result);
+			if (result.p >= 0.85) safety.push(result);
 		}
 		//sort by ranking within each probability range
 		reach.sort((x, y) => x.RANKING - y.RANKING);
@@ -142,8 +144,8 @@ function getEssayReq(number){
 }
 
 //after user searches for a specific school (search bar)
-app.post('/search-school', function(req, res){
-	var name = req.body.school_name;
+app.get('/search-school', function(req, res){
+	var name = req.query.school_name;
 	var q = `SELECT * FROM uni WHERE INSTNM like '%${name}%';`;
 	connection.query(q, function(error, results){
 		if (error) throw error;
