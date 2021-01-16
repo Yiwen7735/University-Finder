@@ -72,12 +72,14 @@ app.post("/your-schools", function(req, res){
 		q = `SELECT INSTNM, RANKING, ADDR, CITY, STABBR, 
 			 TUITION2, TUITION3, ADMR, 
 			 SATVRM, SATVRSD, SATMTM, SATMTSD, 
+			 ACTCMM, ACTCMSD, ACTENM, ACTENSD, ACTMTM, ACTMTSD, 
 			 (${scores.satvr} - SATVRM) / SATVRSD AS zVR, 
 			 (${scores.satmt} - SATMTM) / SATMTSD AS zMT FROM uni;`;
 
 	else if (scores.test === 'act')
 		q = `SELECT INSTNM, RANKING, ADDR, CITY, STABBR, 
 		 	 TUITION2, TUITION3, ADMR, 
+		 	 SATVRM, SATVRSD, SATMTM, SATMTSD, 
 			 ACTCMM, ACTCMSD, ACTENM, ACTENSD, ACTMTM, ACTMTSD, 
 			 (${scores.actcm} - ACTCMM) / ACTCMSD AS zCM, 
 		 	 (${scores.acten} - ACTENM) / ACTENSD AS zVR, 
