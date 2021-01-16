@@ -72,31 +72,31 @@
                         </span>
                     </div>
                     <div class="admission_rate">Admission Rate: <span class="numbers">
-                            <%= school.ADMR %>
+                            <%= (school.ADMR*100).toFixed(2) %>%
                         </span></div>
                     <div class="tuition"> <span>Tuition Fee:</span><br>In-state: <span class="tuition_fee">
-                            <%= school.TUITION2 %>
+                            $<%= school.TUITION2 %>
                         </span>
                         &nbsp;Out-of-state: <span class="tuition_fee">
-                            <%= school.TUITION3 %>
+                            $<%= school.TUITION3 %>
                         </span> </div>
                 </div>
 
                 <div class="sat">
                     <div class="sat_act_title">SAT Score:</div>
-                    <div class="subject"><span class="r_w">R & W:</span> <span class="score">Mean: <span
+                    <div class="subject"><span class="r_w">Reading: </span> <span class="score">Mean: <span
                                 class="numbers">
-                                <%= school.SATVRM %>
+                                <%= school.SATVRM.toFixed(2) %>
                             </span> &nbsp;&nbsp;
                             SD: <span class="numbers">
-                                <%= school.SATVRSD %>
+                                <%= school.SATVRSD.toFixed(2) %>
                             </span></span></div>
                     <div class="subject">
                         <span class="math">Math: Mean: <span class="numbers">
-                                <%= school.SATMTM %>
+                                <%= school.SATMTM.toFixed(2) %>
                             </span> &nbsp;&nbsp;
                             SD: <span class="numbers">
-                                <%= school.SATMTSD %>
+                                <%= school.SATMTSD.toFixed(2) %>
                             </span></span>
                     </div>
                 </div>
@@ -104,24 +104,24 @@
                 <div class="act">
                     <div class="sat_act_title">ACT Score:</div>
                     <div class="subject">Composite: Mean: <span class="numbers">
-                            <%= school.ACTCMM %>
+                            <%= school.ACTCMM.toFixed(2) %>
                         </span> &nbsp;
                         SD: <span class="numbers">
-                            <%= school.ACTCMSD %>
+                            <%= school.ACTCMSD.toFixed(2) %>
                         </span></div>
                     <div class="subject"><span class="english"> English: </span>
                         Mean: <span class="numbers">
-                            <%= school.ACTENM %>
+                            <%= school.ACTENM.toFixed(2) %>
                         </span> &nbsp;
                         SD: <span class="numbers">
-                            <%= school.ACTENSD %>
+                            <%= school.ACTENSD.toFixed(2) %>
                         </span></div>
                     <div class="subject"><span class="act_math">Math:</span> 75%: <span class="numbers">
-                            <%= school.ACTMTM %>
+                            <%= school.ACTMTM.toFixed(2) %>
                         </span>
                         &nbsp;
                         25%: <span class="numbers">
-                            <%= school.SATMTSD %>
+                            <%= school.ACTMTSD.toFixed(2) %>
                         </span>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
 
     <div id="match" style="display: none;">
 
-        <% for (var school of schools.reach){ %>
+        <% for (var school of schools.match){ %>
             <div class="university">
                 <div class="university_info">
                     <div>
@@ -149,31 +149,31 @@
                         </span>
                     </div>
                     <div class="admission_rate">Admission Rate: <span class="numbers">
-                            <%= school.ADMR %>
+                            <%= (school.ADMR*100).toFixed(2) %>%
                         </span></div>
                     <div class="tuition"> <span>Tuition Fee:</span><br>In-state: <span class="tuition_fee">
-                            <%= school.TUITION2 %>
+                            $<%= school.TUITION2 %>
                         </span>
                         &nbsp;Out-of-state: <span class="tuition_fee">
-                            <%= school.TUITION3 %>
+                            $<%= school.TUITION3 %>
                         </span> </div>
                 </div>
 
                 <div class="sat">
                     <div class="sat_act_title">SAT Score:</div>
-                    <div class="subject"><span class="r_w">R & W:</span> <span class="score">Mean: <span
+                    <div class="subject"><span class="r_w">Reading: </span> <span class="score">Mean: <span
                                 class="numbers">
-                                <%= school.SATVRM %>
+                                <%= school.SATVRM.toFixed(2) %>
                             </span> &nbsp;&nbsp;
                             SD: <span class="numbers">
-                                <%= school.SATVRSD %>
+                                <%= school.SATVRSD.toFixed(2) %>
                             </span></span></div>
                     <div class="subject">
                         <span class="math">Math: Mean: <span class="numbers">
-                                <%= school.SATMTM %>
+                                <%= school.SATMTM.toFixed(2) %>
                             </span> &nbsp;&nbsp;
                             SD: <span class="numbers">
-                                <%= school.SATMTSD %>
+                                <%= school.SATMTSD.toFixed(2) %>
                             </span></span>
                     </div>
                 </div>
@@ -181,24 +181,24 @@
                 <div class="act">
                     <div class="sat_act_title">ACT Score:</div>
                     <div class="subject">Composite: Mean: <span class="numbers">
-                            <%= school.ACTCMM %>
+                            <%= school.ACTCMM.toFixed(2) %>
                         </span> &nbsp;
                         SD: <span class="numbers">
-                            <%= school.ACTCMSD %>
+                            <%= school.ACTCMSD.toFixed(2) %>
                         </span></div>
                     <div class="subject"><span class="english"> English: </span>
                         Mean: <span class="numbers">
-                            <%= school.ACTENM %>
+                            <%= school.ACTENM.toFixed(2) %>
                         </span> &nbsp;
                         SD: <span class="numbers">
-                            <%= school.ACTENSD %>
+                            <%= school.ACTENSD.toFixed(2) %>
                         </span></div>
                     <div class="subject"><span class="act_math">Math:</span> 75%: <span class="numbers">
-                            <%= school.ACTMTM %>
+                            <%= school.ACTMTM.toFixed(2) %>
                         </span>
                         &nbsp;
                         25%: <span class="numbers">
-                            <%= school.SATMTSD %>
+                            <%= school.ACTMTSD.toFixed(2) %>
                         </span>
                     </div>
                 </div>
@@ -208,7 +208,7 @@
 
     <div id="safety" style="display: none;">
 
-        <% for (var school of schools.reach){ %>
+        <% for (var school of schools.safety){ %>
             <div class="university">
                 <div class="university_info">
                     <div>
@@ -226,31 +226,31 @@
                         </span>
                     </div>
                     <div class="admission_rate">Admission Rate: <span class="numbers">
-                            <%= school.ADMR %>
+                            <%= (school.ADMR*100).toFixed(2) %>%
                         </span></div>
                     <div class="tuition"> <span>Tuition Fee:</span><br>In-state: <span class="tuition_fee">
-                            <%= school.TUITION2 %>
+                            $<%= school.TUITION2 %>
                         </span>
                         &nbsp;Out-of-state: <span class="tuition_fee">
-                            <%= school.TUITION3 %>
+                            $<%= school.TUITION3 %>
                         </span> </div>
                 </div>
 
                 <div class="sat">
                     <div class="sat_act_title">SAT Score:</div>
-                    <div class="subject"><span class="r_w">R & W:</span> <span class="score">Mean: <span
+                    <div class="subject"><span class="r_w">Reading: </span> <span class="score">Mean: <span
                                 class="numbers">
-                                <%= school.SATVRM %>
+                                <%= school.SATVRM.toFixed(2) %>
                             </span> &nbsp;&nbsp;
                             SD: <span class="numbers">
-                                <%= school.SATVRSD %>
+                                <%= school.SATVRSD.toFixed(2) %>
                             </span></span></div>
                     <div class="subject">
                         <span class="math">Math: Mean: <span class="numbers">
-                                <%= school.SATMTM %>
+                                <%= school.SATMTM.toFixed(2) %>
                             </span> &nbsp;&nbsp;
                             SD: <span class="numbers">
-                                <%= school.SATMTSD %>
+                                <%= school.SATMTSD.toFixed(2) %>
                             </span></span>
                     </div>
                 </div>
@@ -258,24 +258,24 @@
                 <div class="act">
                     <div class="sat_act_title">ACT Score:</div>
                     <div class="subject">Composite: Mean: <span class="numbers">
-                            <%= school.ACTCMM %>
+                            <%= school.ACTCMM.toFixed(2) %>
                         </span> &nbsp;
                         SD: <span class="numbers">
-                            <%= school.ACTCMSD %>
+                            <%= school.ACTCMSD.toFixed(2) %>
                         </span></div>
                     <div class="subject"><span class="english"> English: </span>
                         Mean: <span class="numbers">
-                            <%= school.ACTENM %>
+                            <%= school.ACTENM.toFixed(2) %>
                         </span> &nbsp;
                         SD: <span class="numbers">
-                            <%= school.ACTENSD %>
+                            <%= school.ACTENSD.toFixed(2) %>
                         </span></div>
                     <div class="subject"><span class="act_math">Math:</span> 75%: <span class="numbers">
-                            <%= school.ACTMTM %>
+                            <%= school.ACTMTM.toFixed(2) %>
                         </span>
                         &nbsp;
                         25%: <span class="numbers">
-                            <%= school.SATMTSD %>
+                            <%= school.ACTMTSD.toFixed(2) %>
                         </span>
                     </div>
                 </div>
