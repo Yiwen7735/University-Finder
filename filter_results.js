@@ -154,6 +154,7 @@ app.get('/search-school', function(req, res){
 	connection.query(q, function(error, results){
 		if (error) throw error;
 		//console.log(results);
+		results.sort((x, y) => x.RANKING - y.RANKING);
 		var school_params = {
 			name: results[0].INSTNM, 
 			logo: results[0].IMAGE + ".png", 
