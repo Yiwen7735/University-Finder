@@ -157,8 +157,11 @@
                     </div>
                     <div class="national_rank">
                         <img class="badge" src="./style/images/star.jpg">
-                        National Rank: <span>
-                            #<%= school.RANKING %>
+                        <% if (school.RANKING < 9999) { %>
+                            National Rank: <span> #<%= school.RANKING %></span>
+                            <%} else { %>
+                            National Rank: <span>Unranked</span>
+                            <% } %>
                         </span>
                     </div>
                     <div class="admission_rate">Admission Rate: <span class="numbers">
@@ -234,9 +237,11 @@
                     </div>
                     <div class="national_rank">
                         <img class="badge" src="./style/images/star.jpg">
-                        National Rank: <span>
-                            #<%= school.RANKING %>
-                        </span>
+                        <% if (school.RANKING < 9999) {%>
+                        National Rank: <span>#<%= school.RANKING %> </span>
+                        <%} else { %>
+                        National Rank: <span>Unranked</span>
+                        <% } %>
                     </div>
                     <div class="admission_rate">Admission Rate: <span class="numbers">
                             <%= (school.ADMR*100).toFixed(2) %>%
