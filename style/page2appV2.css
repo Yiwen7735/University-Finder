@@ -30,8 +30,8 @@ body {
 .university_photo {
     /* align-self: stretch; */
     float:left;
-    width: 150px;
-    height: 145px;
+    width: 25%;
+    height: 10%;
     display: inline-block;
     padding-right: 10px;
     margin:10px 20px 20px 0;  
