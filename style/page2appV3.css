@@ -28,7 +28,7 @@ body {
 } */
 
 .university {
-    width: 44%;
+    width: 50%;
 	height: 18.5%;
     margin: 1.04% 1.56%;
     padding: 0.78%;
@@ -47,7 +47,7 @@ body {
 } */
 
 .university_info {
-    width: 50%;
+    width: 60%;
     float: left;
     display: inline-block;
     box-sizing: border-box;
