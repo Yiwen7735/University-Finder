@@ -148,6 +148,7 @@ function getEssayReq(number){
 	return 'Please check the school website';
 }
 
+
 //after user searches for a specific school (search bar)
 app.get('/search-school', function(req, res){
 	var name = req.query.school_name;
@@ -161,8 +162,8 @@ app.get('/search-school', function(req, res){
 			logo: results[0].IMAGE + ".png", 
 			addr: results[0].ADDR + ', ' + results[0].CITY + ', ' + results[0].STABBR, 
 			rank: (results[0].RANKING < 9999) ? results[0].RANKING : 'Unranked', 
-			tuition_in: results[0].TUITION2, 
-			tuition_out: results[0].TUITION3, 
+			tuition_in: Number(results[0].TUITION2).toLocaleString('en'), 
+			tuition_out: Number(results[0].TUITION3).toLocaleString('en'), 
 			admr: (results[0].ADMR * 100).toFixed(2),
 			hsgpa: getAdmCon(results[0].ADMCON1),
 			hsrank: getAdmCon(results[0].ADMCON2),
