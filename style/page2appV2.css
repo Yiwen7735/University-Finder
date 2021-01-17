@@ -1,31 +1,35 @@
-.Title {
-    font-family: 'Cinzel', serif;
-    height: 11%;
-    font-size: 30px;
-    color: white;
-    text-shadow: 3px 3px 3px #922B21;
-    text-align: center;
-    padding: 8em 0 0 0;
-    margin-top: 0;
-    background-image: url("./images/penn3.jpg");
-    background-size: cover;
-    background-position: bottom ; 
-    background-repeat: no-repeat;
-    opacity: 0.75
-}
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
 
 body {
-    font-family: 'Open Sans', sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(./images/5.png);
+  /* attribute to <a href='https://www.freepik.com/vectors/business'>Business vector created by katemangostar - www.freepik.com</a> */
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.logo img{
+  width: 350px;
+  float: left;
+  margin: 0;
 }
 
 .university {
     width: 34%;
 	height: 18%;
-    margin: 1.04% 32%;
+    /*margin: 1.04% 30%;*/
+    margin-top: 90px;
+    margin-left: 100px;
     padding: 0.78%;
     box-shadow: rgba(17, 17, 17, 0.3) 0px 0px 6px;
     border-radius: 10px;
     display: inline-block;
+    background: transparent;
+    font-family: 'Yusei Magic', sans-serif;
+    color: #273c75;
+    background: rgba(220, 221, 225,0.5);
+    box-shadow: 0 0 10px rgba(25, 42, 86,0.5);
 }
 
 .university_photo {
@@ -36,7 +40,7 @@ body {
     display: inline-block;
     padding-right: 10px;
     margin:10px 20px 20px 0;  
-    border-right: 2px solid #f1f1f1;
+    border-right: 2px solid #273c75;
 }
 
 .university_info {
@@ -46,7 +50,6 @@ body {
     box-sizing: border-box;
     padding-right: 0px;
     margin-right: 0px;
-    font-family: 'Roboto', sans-serif;
 }
 
 .university_name {
@@ -60,7 +63,7 @@ body {
 .university_address {
     font-size: 15px;
     margin-bottom: 0.5em;
-    color:grey;
+    color: #374C87;
 }
 
 .badge {
@@ -75,56 +78,51 @@ body {
 }
 
 .national_rank span {
-    color: #e63946;
+    color: #922B21;
     font-style: italic;
 }
 
-.tuition span{
-    color: grey;
-}
-
-.numbers{
-    color: black;
-}
-
-.tuition .tuition_fee{
-    color: black;
-}
-
-
 h3 {
-    font-family: 'Arvo', serif;
+    font-family: 'Yusei Magic', sans-serif;
     font-size: 1.5rem;
     text-align: center;
+    color: #273c75;
 }
-
 
 
 .supplements {
+    width: 50%;
+    padding: 0.78%;
     margin: 0 25%;
     margin-bottom: 10%;
-    font-size: 14px;
+    font-family: 'Yusei Magic', sans-serif;
+    border-radius: 5px;
+    background: rgba(220, 221, 225,0.5);
+    box-shadow: 0 rgba(25, 42, 86, 0.5);
 }
 
 .tablevalue {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Yusei Magic', sans-serif;
 }
 
 
 table.paleBlueRows {
     /* font-family: 'Roboto', sans-serif; */
-    font-size: 1rem;
-    margin-right: 0;
+    font-size: 16px;
+    font-weight: bold;
     margin-left: 20%;
+    margin-right: 0;
     /* background-color: #EEEEEE; */
     width: 60%;
     height: auto;
+    color: #273c75;
     
   }
   table.paleBlueRows td{
-    border-bottom: 2px solid #d6d6d2;
+    border-bottom: 2px;
     border-top: none;
     padding: 10px 3px;
+
   }
 /* 
   table.paleBlueRows tr:nth-child(even) {
@@ -132,6 +130,5 @@ table.paleBlueRows {
   } */
 
   table.paleBlueRows tr td:nth-child(even) {
-    
     text-align: right;
   }

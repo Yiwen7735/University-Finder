@@ -16,15 +16,13 @@
 
 
 <body style="margin: 0;">
-    <div class="Title">
-        <h1>Your Search Result</h1>
-    </div>
-
-    <!-- calculate font size -->
+    <div class="Title"></div>
+      <div class="logo"><img src="./style/images/3(1).png"></div>
+    <!-- calculate font size --> 
     <script type="text/javascript">
         function fontSize() {
             var deviceWidth = document.documentElement.clientWidth < 760 ? 760 : document.documentElement.clientWidth;
-            document.documentElement.style.fontSize = (deviceWidth / 120) + "px";
+            document.documentElement.style.fontSize = (deviceWidth / 100) + "px";
         }
         fontSize();
         window.onresize = fontSize;
@@ -34,23 +32,24 @@
 
     <div class="university">
         <div class="school badge"><img class="university_photo" src="<%= school.logo %>" /></div>
-
         <div class="university_info">
             <div><h3 class="university_name"><%= school.name %></h3></div>
             <div class="university_address"><%= school.addr %></div>
             <div class="national_rank">
-                <img class="badge" src="./style/images/star.jpg">
-                National Rank: <span>#<%= school.rank %></span>
+                <img class="badge" src="./style/images/star.jpg">National Rank: <span>#<%= school.rank %></span>
             </div>
             <div class="admission_rate">Admission Rate: <span class="numbers"><%= school.admr %>%</span></div>
-            <div class="tuition"> <br>In-state Tuition: <span class="tuition_fee">$<%=
-                        school.tuition_in %></span>
-                &nbsp;&nbsp;Out-of-state Tuition: <span class="tuition_fee">$<%= school.tuition_out %></span> </div>
+            <div class="tuition">Tuition: 
+                <span class="tuition_fee">$<%= school.tuition_out %> </span> 
+                <% if (school.tuition_in != school.tuition_out) { %>
+                <span class="tuition_fee"><%= " (in-state: $" + school.tuition_in + ")" %></span>
+                <% } %>
+                
+            </div>
         </div>
     </div>
 
-
-    <h3>To apply for this school, you may also need the following </h3>
+    <h3>To apply for this university, you may also need...</h3>
     <div class="supplements">
         <table class="paleBlueRows">
             <tbody>
@@ -76,19 +75,19 @@
                     <td><div class="tablevalue"><%= school.recom %></div></td>
                 </tr>
                 <tr>
-                    <td>Admission Test Scores (SAT, ACT, etc)</td>
+                    <td>Admission Test Scores (e.g SAT)</td>
                     <td><div class="tablevalue"><%= school.test %></div></td>
                 </tr>
                 <tr>
-                    <td>TOEFL Scores</td>
+                    <td>TOEFL Score</td>
                     <td><div class="tablevalue"><%= school.toefl %></div></td>
                 </tr>
                 <tr>
-                    <td>Number of Long Essays (more than 250 words)</td>
+                    <td>Long Essays (> 250 words)</td>
                     <td><div class="tablevalue"><%= school.long_essay %></div></td>
                 </tr>
                 <tr>
-                    <td>Number of Short Essays (below 250 words)</td>
+                    <td>Short Essays (<= 250 words)</td>
                     <td><div class="tablevalue"><%= school.short_essay %></div></td>
                 </tr>
             </tbody>
