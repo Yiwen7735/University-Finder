@@ -4,6 +4,7 @@ var mysql = require('mysql');
 var express = require('express');
 var http = require('http');
 var parser = require('body-parser');
+const port = process.env.PORT || 80;
 
 /* set up express framework */
 var app = express();
@@ -179,6 +180,6 @@ app.get('/search-school', function(req, res){
 	});
 });
 
-http.createServer(app).listen(80);
+http.createServer(app).listen(port);
 
 
