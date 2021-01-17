@@ -14,7 +14,7 @@
 
 <body style="margin: 0;">
     <div class="logo"><img src="./style/images/3(1).png"></div>
-    <<h1>Your University Recommendations</h1>
+    <h1>Your University Recommendations</h1>
 
     <!-- javascript functions -->
     <script type="text/javascript">
@@ -147,24 +147,24 @@
                                 </span>
                             </div>
                         </div>
-                    <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
-                            $<%= Number(school.TUITION2).toLocaleString('en') %>
-                        </span>
-                        &nbsp;&nbsp;Out-of-state <span class="tuition_fee">
-                            $<%= Number(school.TUITION3).toLocaleString('en') %>
-                        </span> </div>
+                        <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
+                                $<%= Number(school.TUITION2).toLocaleString('en') %>
+                            </span>
+                            &nbsp;&nbsp;Out-of-state <span class="tuition_fee">
+                                $<%= Number(school.TUITION3).toLocaleString('en') %>
+                            </span> </div>
                         <% } %>
             </div>
             <% } %>
-        <% if (!schools.reach.length) {%> 
-            <% if (schools.safety.length) {%>
-            <h2>Apparently, no school is above you!</h2>
-            <% } else {%>
-            <br>
-            <h2>You may want to check out some vocational programs.</h2>
-            <h2>University isn't the only way to success.</h2>
-            <% } %>
-        <% } %>
+                <% if (!schools.reach.length) {%>
+                    <% if (schools.safety.length) {%>
+                        <h2>Apparently, no school is above you!</h2>
+                        <% } else {%>
+                            <br>
+                            <h2>You may want to check out some vocational programs.</h2>
+                            <h2>University isn't the only way to success.</h2>
+                            <% } %>
+                                <% } %>
 
     </div>
 
@@ -266,15 +266,15 @@
                         <% } %>
             </div>
             <% } %>
-        <% if (schools.match.length == 0) {%>
-            <% if (schools.safety.length) { %>
-            <h2>Just check out the safety schools!</h2>
-            <% } else if (schools.reach.length == 0) { %>
-            <br>
-            <h2>You may want to check out some vocational programs.</h2>
-            <h2>University isn't the only way to success.</h2>
-            <% } %>
-        <% } %>
+                <% if (schools.match.length==0) {%>
+                    <% if (schools.safety.length) { %>
+                        <h2>Just check out the safety schools!</h2>
+                        <% } else if (schools.reach.length==0) { %>
+                            <br>
+                            <h2>You may want to check out some vocational programs.</h2>
+                            <h2>University isn't the only way to success.</h2>
+                            <% } %>
+                                <% } %>
     </div>
 
 
@@ -364,19 +364,19 @@
                             </div>
                         </div>
                         <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
-                            $<%= Number(school.TUITION2).toLocaleString('en') %>
-                        </span>
-                        &nbsp;&nbsp;Out-of-state <span class="tuition_fee">
-                            $<%= Number(school.TUITION3).toLocaleString('en') %>
-                        </span> </div>
+                                $<%= Number(school.TUITION2).toLocaleString('en') %>
+                            </span>
+                            &nbsp;&nbsp;Out-of-state <span class="tuition_fee">
+                                $<%= Number(school.TUITION3).toLocaleString('en') %>
+                            </span> </div>
                         <% } %>
-                </div>
+            </div>
             <% } %>
-            <% if (!schools.safety.length && !schools.match.length && !schools.reach.length) {%>
-            <br>
-            <h2>You may want to check out some vocational programs.</h2>
-            <h2>University isn't the only way to success.</h2>
-            <% } %>
+                <% if (!schools.safety.length && !schools.match.length && !schools.reach.length) {%>
+                    <br>
+                    <h2>You may want to check out some vocational programs.</h2>
+                    <h2>University isn't the only way to success.</h2>
+                    <% } %>
     </div>
 
 </body>
