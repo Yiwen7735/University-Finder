@@ -158,9 +158,11 @@
             <% } %>
         <% if (!schools.reach.length) {%> 
             <% if (schools.safety.length) {%>
-            <h2>No school is above you!</h2>
+            <h2>Apparently, no school is above you!</h2>
             <% } else {%>
-            <h2>You may want to check out some vocational programs</h2>
+            <br>
+            <h2>You may want to check out some vocational programs.</h2>
+            <h2>University isn't the only way to success.</h2>
             <% } %>
         <% } %>
 
@@ -266,9 +268,11 @@
             <% } %>
         <% if (schools.match.length == 0) {%>
             <% if (schools.safety.length) { %>
-            <h2>No school is above you!</h2>
+            <h2>Just check out the safety schools!</h2>
             <% } else if (schools.reach.length == 0) { %>
-            <h2>You may want to check out some vocational programs</h2>
+            <br>
+            <h2>You may want to check out some vocational programs.</h2>
+            <h2>University isn't the only way to success.</h2>
             <% } %>
         <% } %>
     </div>
@@ -369,7 +373,9 @@
                 </div>
             <% } %>
             <% if (!schools.safety.length && !schools.match.length && !schools.reach.length) {%>
-            <h2>You may want to check out some vocational programs</h2>
+            <br>
+            <h2>You may want to check out some vocational programs.</h2>
+            <h2>University isn't the only way to success.</h2>
             <% } %>
     </div>
 
