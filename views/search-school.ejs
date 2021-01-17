@@ -35,14 +35,12 @@
         <div class="university_info">
             <div><h3 class="university_name"><%= school.name %></h3></div>
             <div class="university_address"><%= school.addr %></div>
-            <div class="national_rank">
-                <img class="badge" src="./style/images/star.jpg">National Rank: <span>#<%= school.rank %></span>
-            </div>
-            <div class="admission_rate">Admission Rate: <span class="numbers"><%= school.admr %>%</span></div>
+            <div class="national_rank">&#9733;National Rank: <span class='number'>#<%= school.rank %></span></div>
+            <div class="admission_rate">Admission Rate: <span class="number"><%= school.admr %>%</span></div>
             <div class="tuition">Tuition: 
-                <span class="tuition_fee">$<%= school.tuition_out %> </span> 
+                <span class="number">$<%= school.tuition_out %> </span> 
                 <% if (school.tuition_in != school.tuition_out) { %>
-                <span class="tuition_fee"><%= " (in-state: $" + school.tuition_in + ")" %></span>
+                <span class="number"><%= " (in-state: $" + school.tuition_in + ")" %></span>
                 <% } %>
                 
             </div>
@@ -87,7 +85,7 @@
                     <td><div class="tablevalue"><%= school.long_essay %></div></td>
                 </tr>
                 <tr>
-                    <td>Short Essays (<= 250 words)</td>
+                    <td>Short Essays (&le; 250 words)</td>
                     <td><div class="tablevalue"><%= school.short_essay %></div></td>
                 </tr>
             </tbody>

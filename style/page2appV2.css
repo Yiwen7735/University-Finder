@@ -2,7 +2,7 @@
 
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(./images/5.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(./images/5.jpg);
   /* attribute to <a href='https://www.freepik.com/vectors/business'>Business vector created by katemangostar - www.freepik.com</a> */
   background-size: cover;
   background-position: top center;
@@ -27,9 +27,9 @@ body {
     display: inline-block;
     background: transparent;
     font-family: 'Yusei Magic', sans-serif;
-    color: #273c75;
     background: rgba(220, 221, 225,0.5);
     box-shadow: 0 0 10px rgba(25, 42, 86,0.5);
+    color: #273c75;
 }
 
 .university_photo {
@@ -63,7 +63,6 @@ body {
 .university_address {
     font-size: 15px;
     margin-bottom: 0.5em;
-    color: #374C87;
 }
 
 .badge {
@@ -78,8 +77,11 @@ body {
 }
 
 .national_rank span {
-    color: #922B21;
     font-style: italic;
+}
+
+.number{
+    color: #61003D; 
 }
 
 h3 {
@@ -96,21 +98,22 @@ h3 {
     margin: 0 25%;
     margin-bottom: 10%;
     font-family: 'Yusei Magic', sans-serif;
-    border-radius: 5px;
+    border-radius: 10px;
     background: rgba(220, 221, 225,0.5);
-    box-shadow: 0 rgba(25, 42, 86, 0.5);
+    box-shadow: 0 0 0 0px rgba(25, 42, 86, 0.5);
 }
 
 .tablevalue {
     font-family: 'Yusei Magic', sans-serif;
+    color: #61003D;
 }
 
 
 table.paleBlueRows {
     /* font-family: 'Roboto', sans-serif; */
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
-    margin-left: 20%;
+    margin-left: 18%;
     margin-right: 0;
     /* background-color: #EEEEEE; */
     width: 60%;
