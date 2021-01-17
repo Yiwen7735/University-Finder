@@ -2,7 +2,7 @@
 
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(./images/6.jpg);
+  background-image: url(./images/6.jpg);
   /* attribute to <a href='https://www.freepik.com/vectors/business'>Business vector created by katemangostar - www.freepik.com</a> */
   background-size: cover;
   background-position: top center;
