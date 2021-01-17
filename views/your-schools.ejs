@@ -13,9 +13,8 @@
 </head>
 
 <body style="margin: 0;">
-    <div class="Title">
-        <h1>Your University Recommendations</h1>
-    </div>
+    <div class="logo"><img src="./style/images/3(1).png"></div>
+    <<h1>Your University Recommendations</h1>
 
     <!-- javascript functions -->
     <script type="text/javascript">
@@ -117,10 +116,10 @@
                         </div>
                     </div>
                     <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
-                            $<%= school.TUITION2 %>
+                            $<%= Number(school.TUITION2).toLocaleString('en') %>
                         </span>
                         &nbsp;&nbsp;Out-of-state <span class="tuition_fee">
-                            $<%= school.TUITION3 %>
+                            $<%= Number(school.TUITION3).toLocaleString('en') %>
                         </span> </div>
 
                     <% } else { %>
@@ -148,16 +147,26 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
-                                $<%= school.TUITION2 %>
-                            </span>
-                            &nbsp;&nbsp;Out-of-state <span class="tuition_fee">
-                                $<%= school.TUITION3 %>
-                            </span> </div>
+                    <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
+                            $<%= Number(school.TUITION2).toLocaleString('en') %>
+                        </span>
+                        &nbsp;&nbsp;Out-of-state <span class="tuition_fee">
+                            $<%= Number(school.TUITION3).toLocaleString('en') %>
+                        </span> </div>
                         <% } %>
             </div>
             <% } %>
+        <% if (!schools.reach.length) {%> 
+            <% if (schools.safety.length) {%>
+            <h2>No school is above you!</h2>
+            <% } else {%>
+            <h2>You may want to check out some vocational programs</h2>
+            <% } %>
+        <% } %>
+
     </div>
+
+
 
     <div id="match" style="display: none;">
 
@@ -216,10 +225,10 @@
                         </div>
                     </div>
                     <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
-                            $<%= school.TUITION2 %>
+                            $<%= Number(school.TUITION2).toLocaleString('en') %>
                         </span>
                         &nbsp;&nbsp;Out-of-state <span class="tuition_fee">
-                            $<%= school.TUITION3 %>
+                            $<%= Number(school.TUITION3).toLocaleString('en') %>
                         </span> </div>
                     <% } else { %>
                         <div class="act">
@@ -247,15 +256,23 @@
                             </div>
                         </div>
                         <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
-                                $<%= school.TUITION2 %>
+                                $<%= Number(school.TUITION2).toLocaleString('en') %>
                             </span>
                             &nbsp;&nbsp;Out-of-state <span class="tuition_fee">
-                                $<%= school.TUITION3 %>
+                                $<%= Number(school.TUITION3).toLocaleString('en') %>
                             </span> </div>
                         <% } %>
             </div>
             <% } %>
+        <% if (schools.match.length == 0) {%>
+            <% if (schools.safety.length) { %>
+            <h2>No school is above you!</h2>
+            <% } else if (schools.reach.length == 0) { %>
+            <h2>You may want to check out some vocational programs</h2>
+            <% } %>
+        <% } %>
     </div>
+
 
     <div id="safety" style="display: none;">
 
@@ -312,10 +329,10 @@
                         </div>
                     </div>
                     <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
-                            $<%= school.TUITION2 %>
+                            $<%= Number(school.TUITION2).toLocaleString('en') %>
                         </span>
-                        &nbsp;&nbsp; Out-of-state <span class="tuition_fee">
-                            $<%= school.TUITION3 %>
+                        &nbsp;&nbsp;Out-of-state <span class="tuition_fee">
+                            $<%= Number(school.TUITION3).toLocaleString('en') %>
                         </span> </div>
                     <% } else { %>
                         <div class="act">
@@ -343,13 +360,16 @@
                             </div>
                         </div>
                         <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
-                                $<%= school.TUITION2 %>
-                            </span>
-                            &nbsp;&nbsp;Out-of-state <span class="tuition_fee">
-                                $<%= school.TUITION3 %>
-                            </span> </div>
+                            $<%= Number(school.TUITION2).toLocaleString('en') %>
+                        </span>
+                        &nbsp;&nbsp;Out-of-state <span class="tuition_fee">
+                            $<%= Number(school.TUITION3).toLocaleString('en') %>
+                        </span> </div>
                         <% } %>
-            </div>
+                </div>
+            <% } %>
+            <% if (!schools.safety.length && !schools.match.length && !schools.reach.length) {%>
+            <h2>You may want to check out some vocational programs</h2>
             <% } %>
     </div>
 
