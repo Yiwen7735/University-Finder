@@ -84,6 +84,14 @@ body {
     color: #61003D; 
 }
 
+h2{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 30px;
+    color: #61003D;
+    text-align: center;
+    padding: 250px;
+}
+
 h3 {
     font-family: 'Yusei Magic', sans-serif;
     font-size: 1.5rem;
