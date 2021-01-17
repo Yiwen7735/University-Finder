@@ -1,6 +1,7 @@
 # MCIT On-Campus 2021 Winter Hackathon 
-### Project/Team Name: University-Finder
+## Project/Team Name: University-Finder
 
+### Introduction
 **Team Members** 
 Name | Year
 ------------ | -------------
@@ -24,12 +25,13 @@ We plan to rely on AWS RDS to host our database for US universities and use node
 **Presentation URL**
 https://youtu.be/3R1ovRm2Biw
 
+### Running The App
 **Pages**
 - `index.html`: This is the home page where the user can find a search bar (-> `/searach-school`) and a section to input their test scores (-> `/your-schools`).
 - `/your-schools`: Upon receiving user scores, the app will generate three different packages of schools (reach, match, safety) which will be displayed under different buttons. Depending on which test has been chosen, the mean and sd of past admission statistics (taken over 10 years) will also be displayed. Meanwhile, user can click on the name of the recommended school to go to `/searach-school` for additional requirements.
 - `/search-school`: This page displays all the materials needed for applying for a specific university (high school records, essays, etc).
 
-**How to Run**
+**How to Run** <br/>
 Clone this git repo, set the variable `rds_pw` as password (please contact the repo owner for this) and run the command line:
 ```
 node filter_results.js
