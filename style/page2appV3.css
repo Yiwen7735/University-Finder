@@ -22,8 +22,8 @@ h2{
 
 body {
     font-family: 'Yusei Magic', sans-serif;
-    /*background-image: url('./images/5.jpg');
-    background-size: cover;*/
+    background-image: url('./images/7.jpg');
+    background-size: cover;
 }
 
 
@@ -38,10 +38,11 @@ body {
 
 .university {
     width: 44%;
-	height: 18.5%;
+    height: 18.5%;
     margin: 1.04% 1.56%;
     padding: 0.78%;
-    box-shadow: rgba(17, 17, 17, 0.3) 0px 0px 6px;
+    background: rgba(220, 221, 225, 0.6);
+    box-shadow: rgba(17, 17, 17, 0.2) 0px 0px 6px;
     border-radius: 10px;
     display: inline-block;
 }
@@ -52,7 +53,7 @@ body {
     float:left;
     width: 22%;
     height: auto;
-    margin-right: 20px;    
+    margin-right: 20px;
 } */
 
 .university_info {
@@ -132,7 +133,7 @@ body {
     margin-left: 5px;
     display: inline-block;
     border-bottom: 2px solid #f1f1f1;
-} 
+}
 
 .subject_name {
     text-align: right;
@@ -194,7 +195,7 @@ input[type=radio] + label {
     line-height: 2.0;
     border: 2px solid white;
     opacity: 0.8;
-    color: #61003D; 
+    color: #61003D;
     text-align: center;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     vertical-align: middle;
