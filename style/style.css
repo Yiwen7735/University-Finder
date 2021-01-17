@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Yusei Magic', sans-serif;
   font-weight: bold;
 }
 
@@ -96,7 +96,7 @@ label, input[type='range'] {
 }
 .title h1{
   color: #273c75;
-  font-size: 50px;
+  font-size: 44px;
 }
 .search-box {
   position: absolute;
