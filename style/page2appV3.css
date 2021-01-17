@@ -7,10 +7,10 @@
 
 h1 {
     font-family: 'Yusei Magic', sans-serif;
-    font-size: 30px;
+    font-size: 44px;
     color: #273c75;
     padding-top: 2em;
-    padding-left: 16em;
+    padding-left: 10em;
 }
 
 h2{
@@ -176,9 +176,9 @@ body {
 
 .userInput {
     /*margin: 30px 20%;*/
-    margin-left: 14em;
+    margin-left: 12em;
     font-family: 'Yusei Magic', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     color: #273c75;
 }
 
