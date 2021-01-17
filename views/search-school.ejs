@@ -29,70 +29,73 @@
     </script>
 
 
-
-    <div class="university">
-        <div class="school badge"><img class="university_photo" src="<%= school.logo %>" /></div>
-        <div class="university_info">
-            <div><h3 class="university_name"><%= school.name %></h3></div>
-            <div class="university_address"><%= school.addr %></div>
-            <div class="national_rank">&#9733;National Rank: <span class='number'>#<%= school.rank %></span></div>
-            <div class="admission_rate">Admission Rate: <span class="number"><%= school.admr %>%</span></div>
-            <div class="tuition">Tuition: 
-                <span class="number">$<%= school.tuition_out %> </span> 
-                <% if (school.tuition_in != school.tuition_out) { %>
-                <span class="number"><%= " (in-state: $" + school.tuition_in + ")" %></span>
-                <% } %>
-                
+    <% if (school == null) { %>
+    <h2>Sorry, we cannot find this school. <br>
+    Please check your spelling and try again.</h2>
+    <% } else { %>
+        <div class="university">
+            <div class="school badge"><img class="university_photo" src="<%= school.logo %>" /></div>
+            <div class="university_info">
+                <div><h3 class="university_name"><%= school.name %></h3></div>
+                <div class="university_address"><%= school.addr %></div>
+                <div class="national_rank">&#9733;National Rank: <span class='number'>#<%= school.rank %></span></div>
+                <div class="admission_rate">Admission Rate: <span class="number"><%= school.admr %>%</span></div>
+                <div class="tuition">Tuition: 
+                    <span class="number">$<%= school.tuition_out %> </span> 
+                    <% if (school.tuition_in != school.tuition_out) { %>
+                    <span class="number"><%= " (in-state: $" + school.tuition_in + ")" %></span>
+                    <% } %>
+                    
+                </div>
             </div>
         </div>
-    </div>
 
-    <h3>To apply for this university, you may also need...</h3>
-    <div class="supplements">
-        <table class="paleBlueRows">
-            <tbody>
-                <tr>
-                    <td>Secondary School GPA</td>
-                    <td><div class="tablevalue"><%= school.hsgpa %></div></td>
+        <h3>To apply for this university, you may also need...</h3>
+        <div class="supplements">
+            <table class="paleBlueRows">
+                <tbody>
+                    <tr>
+                        <td>Secondary School GPA</td>
+                        <td><div class="tablevalue"><%= school.hsgpa %></div></td>
+                    </tr>
+                    <tr>
+                        <td>Secondary School Ranking</td>
+                        <td><div class="tablevalue"><%= school.hsrank %></div></td>
+                    </tr>
+                    <tr>
+                        <td>Secondary School Records</td>
+                        <td><div class="tablevalue"><%= school.hsrecord %></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>College Preparatory Program</td>
+                        <td><div class="tablevalue"><%= school.prep %></div></td>
+                    </tr>
+                    <tr>
+                        <td>Recommendation Letters</td>
+                        <td><div class="tablevalue"><%= school.recom %></div></td>
+                    </tr>
+                    <tr>
+                        <td>Admission Test Scores (e.g SAT)</td>
+                        <td><div class="tablevalue"><%= school.test %></div></td>
+                    </tr>
+                    <tr>
+                        <td>TOEFL Score</td>
+                        <td><div class="tablevalue"><%= school.toefl %></div></td>
+                    </tr>
+                    <tr>
+                        <td>Long Essays (> 250 words)</td>
+                        <td><div class="tablevalue"><%= school.long_essay %></div></td>
+                    </tr>
+                    <tr>
+                        <td>Short Essays (&le; 250 words)</td>
+                        <td><div class="tablevalue"><%= school.short_essay %></div></td>
+                    </tr>
+                </tbody>
                 </tr>
-                <tr>
-                    <td>Secondary School Ranking</td>
-                    <td><div class="tablevalue"><%= school.hsrank %></div></td>
-                </tr>
-                <tr>
-                    <td>Secondary School Records</td>
-                    <td><div class="tablevalue"><%= school.hsrecord %></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>College Preparatory Program</td>
-                    <td><div class="tablevalue"><%= school.prep %></div></td>
-                </tr>
-                <tr>
-                    <td>Recommendation Letters</td>
-                    <td><div class="tablevalue"><%= school.recom %></div></td>
-                </tr>
-                <tr>
-                    <td>Admission Test Scores (e.g SAT)</td>
-                    <td><div class="tablevalue"><%= school.test %></div></td>
-                </tr>
-                <tr>
-                    <td>TOEFL Score</td>
-                    <td><div class="tablevalue"><%= school.toefl %></div></td>
-                </tr>
-                <tr>
-                    <td>Long Essays (> 250 words)</td>
-                    <td><div class="tablevalue"><%= school.long_essay %></div></td>
-                </tr>
-                <tr>
-                    <td>Short Essays (&le; 250 words)</td>
-                    <td><div class="tablevalue"><%= school.short_essay %></div></td>
-                </tr>
-            </tbody>
-            </tr>
-        </table>
-    </div>
-
+            </table>
+        </div>
+    <% } %>
 
 </body>
 

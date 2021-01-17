@@ -157,25 +157,30 @@ app.get('/search-school', function(req, res){
 	connection.query(q, function(error, results){
 		if (error) throw error;
 		//console.log(results);
-		results.sort((x, y) => x.RANKING - y.RANKING);
-		var school_params = {
-			name: results[0].INSTNM, 
-			logo: results[0].IMAGE + ".png", 
-			addr: results[0].ADDR + ', ' + results[0].CITY + ', ' + results[0].STABBR, 
-			rank: (results[0].RANKING < 9999) ? results[0].RANKING : 'Unranked', 
-			tuition_in: Number(results[0].TUITION2).toLocaleString('en'), 
-			tuition_out: Number(results[0].TUITION3).toLocaleString('en'), 
-			admr: (results[0].ADMR * 100).toFixed(2),
-			hsgpa: getAdmCon(results[0].ADMCON1),
-			hsrank: getAdmCon(results[0].ADMCON2),
-			hsrecord: getAdmCon(results[0].ADMCON3),
-			prep: getAdmCon(results[0].ADMCON4),
-			recom: getAdmCon(results[0].ADMCON5),
-			test: getAdmCon(results[0].ADMCON7),
-			toefl: getAdmCon(results[0].ADMCON8), 
-			long_essay: getEssayReq(results[0].ESSAYL), 
-			short_essay: getEssayReq(results[0].ESSAYS)
-		};
+		if (results.length > 0){
+			results.sort((x, y) => x.RANKING - y.RANKING);
+			var school_params = {
+				name: results[0].INSTNM, 
+				logo: results[0].IMAGE + ".png", 
+				addr: results[0].ADDR + ', ' + results[0].CITY + ', ' + results[0].STABBR, 
+				rank: (results[0].RANKING < 9999) ? results[0].RANKING : 'Unranked', 
+				tuition_in: Number(results[0].TUITION2).toLocaleString('en'), 
+				tuition_out: Number(results[0].TUITION3).toLocaleString('en'), 
+				admr: (results[0].ADMR * 100).toFixed(2),
+				hsgpa: getAdmCon(results[0].ADMCON1),
+				hsrank: getAdmCon(results[0].ADMCON2),
+				hsrecord: getAdmCon(results[0].ADMCON3),
+				prep: getAdmCon(results[0].ADMCON4),
+				recom: getAdmCon(results[0].ADMCON5),
+				test: getAdmCon(results[0].ADMCON7),
+				toefl: getAdmCon(results[0].ADMCON8), 
+				long_essay: getEssayReq(results[0].ESSAYL), 
+				short_essay: getEssayReq(results[0].ESSAYS)
+			};		
+		}
+		else{
+			var school_params = null;
+		}
 		res.render('search-school', {school: school_params});
 	});
 });
