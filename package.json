@@ -26,5 +26,5 @@
     "http": "0.0.1-security",
     "mysql": "^2.18.1"
   }, 
-  "start": "node filter_results.js"
+  "scripts": {"start": "node filter_results.js"}
 }
