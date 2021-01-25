@@ -36,3 +36,6 @@ node filter_results.js
 
 ### Demo
 https://youtu.be/3R1ovRm2Biw
+
+### Try Out Here 
+https://mcit-university-finder.herokuapp.com
