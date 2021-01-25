@@ -18,7 +18,6 @@
 
     <!-- javascript functions -->
     <script type="text/javascript">
-
         function radioCheck() {
             if (document.getElementById("reachSchool").checked) {
                 document.getElementById("reach").style.display = "block";
@@ -85,12 +84,6 @@
                     <div class="admission_rate">Admission Rate <span class="numbers">
                             <%= (school.ADMR*100).toFixed(2) %>%
                         </span></div>
-                    <!-- <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
-                            $<%= school.TUITION2 %>
-                        </span>
-                        &nbsp;Out-of-state <span class="tuition_fee">
-                            $<%= school.TUITION3 %>
-                        </span> </div> -->
                 </div>
 
                 <% if (schools.test==='sat' ) { %>
@@ -194,12 +187,6 @@
                     <div class="admission_rate">Admission Rate <span class="numbers">
                             <%= (school.ADMR*100).toFixed(2) %>%
                         </span></div>
-                    <!-- <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
-                            $<%= school.TUITION2 %>
-                        </span>
-                        &nbsp;Out-of-state <span class="tuition_fee">
-                            $<%= school.TUITION3 %>
-                        </span> </div> -->
                 </div>
 
 
@@ -300,12 +287,6 @@
                     <div class="admission_rate">Admission Rate <span class="numbers">
                             <%= (school.ADMR*100).toFixed(2) %>%
                         </span></div>
-                    <!-- <div class="tuition"> <span>Tuition</span><br>In-state <span class="tuition_fee">
-                            $<%= school.TUITION2 %>
-                        </span>
-                        &nbsp;Out-of-state <span class="tuition_fee">
-                            $<%= school.TUITION3 %>
-                        </span> </div> -->
                 </div>
 
                 <% if (schools.test==='sat' ) { %>
