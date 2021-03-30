@@ -15,7 +15,7 @@ app.use(express.static(__dirname))
 
 /* make connection with AWS RDS */
 var connection = mysql.createConnection({
-	host: 'us-uni.cgcckfsxakvi.us-east-1.rds.amazonaws.com', 
+	host: 'yiwen-db.cgcckfsxakvi.us-east-1.rds.amazonaws.com', 
 	user: 'admin', 
 	password: process.env.rds_pw, 
 	database: 'us_uni',
